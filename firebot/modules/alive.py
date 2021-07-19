@@ -7,6 +7,7 @@ from uniborg.util import friday_on_cmd, sudo_cmd
 from firebot import ALIVE_NAME, CMD_HELP, Lastupdate
 from firebot.Configs import Config
 from firebot.modules import currentversion
+from telethon import version
 
 
 # Functions
@@ -39,13 +40,13 @@ def get_readable_time(seconds: int) -> str:
 
 
 uptime = get_readable_time((time.time() - Lastupdate))
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "VirtualUserbot"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Fire-X"
 PM_IMG = Config.ALIVE_IMAGE
-pm_caption = "  __**🔥🔥𝐌𝐀𝐅𝐈𝐀 𝐁𝐎𝐓 𝐈𝐒 𝐀𝐋𝐈𝐕𝐄🔥🔥**__\n\n"
+pm_caption = "  __**★ ғɪʀᴇ-x ɪs ʀᴜɴɴɪɴɢ sᴜᴄᴇssғᴜʟʟʏ ★**__\n\n"
 
 pm_caption += f"**━━━━━━━━━━━━━━━━━━━━**\n\n"
 pm_caption += (
-    f"                 👑𝐌𝐀𝐒𝐓𝐄𝐑👑\n  **『😈[{DEFAULTUSER}](tg://user?id={mafia})😈』**\n\n"
+    f"                 ◉✿ ᴍᴀsᴛᴇʀ ✿◉\n  **『😈[{DEFAULTUSER}](tg://user?id={mafia})😈』**\n\n"
 )
 pm_caption += f"┏━━━━━━━━━━━━━━━━━━━\n"
 pm_caption += f"┣•➳➠ `Telethon:` `{version.__version__}` \n"
