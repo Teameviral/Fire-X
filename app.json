@@ -1,0 +1,135 @@
+{
+  "name": "Virtual-Userbot",
+  "description": "A Remix of Userbots on Github By @InukaASiTH",
+  "logo": "https://telegra.ph/file/4e1364fb18f899ad47dec.png",
+  "keywords": [
+    "telegram",
+    "virtualuserbot",
+    "plugin",
+    "telegram-virtualuserbot",
+    "productivity"
+  ],
+  "repository": "https://github.com/inukaasith/virtualuserbot",
+  "website": "starkgang.ml",
+  "success_url": "t.me/FridayOT",
+  "stack": "container",
+  "env": {
+    "ENV": {
+      "description": "Setting this to ANYTHING will enable heroku.",
+      "value": "ANYTHING"
+    },
+    "TEMP_DOWNLOAD_DIRECTORY": {
+      "description": "Where downloaded files will go.",
+      "value": "./virtualuserbot/DOWNLOADS/",
+      "required": false
+    },
+    "ALIVE_NAME": {
+      "description": "Enter Username Here ",
+      "value": ""
+    },
+    "lang": {
+      "description": "Enter the Userbot's language ( si , en ) <= Simple letters are copulsory.. only support si and en ",
+      "value": "en"
+    },    
+    "APP_ID": {
+      "description": "Get this value from my.telegram.org! Please do not steal",
+      "value": ""
+    },
+    "API_HASH": {
+      "description": "Get this value from my.telegram.org! Please do not steal",
+      "value": ""
+    },
+    "PLUGIN_CHANNEL": {
+      "description": "Channel Where You Save Your Plugins",
+      "value": ""
+    },
+    "SUDO_USERS": {
+      "description": "Enter A User Id Which You Would Like to Use To Control Sudo. Don't Give Your Own ID Or ID Of Users You Don't Trust.",
+      "value": "",
+      "required": false
+    },
+    "PRIVATE_GROUP_ID": {
+      "description": "A Group ID Where You Want Logging Feature",
+      "value": ""
+    },
+    "STRING_SESSION": {
+      "description": "Get From Repl.run Or Run Locally",
+      "value": ""
+    },
+    "TESSDATA_PREFIX": {
+      "description": "Pytesserct Path. Don't Edit Until You Know What Are You Doing..",
+      "value": "./.apt/usr/share/tesseract-ocr/4.00/tessdata"
+    },
+    "GITHUB_ACCESS_TOKEN": {
+      "description": "Your Github Access Token for GitHub Commit Plugin. Google 'Github access token' to find more About It.",
+      "value": "",
+      "required": false
+    },
+    "GIT_REPO_NAME": {
+      "description": "Your repo name Example: Midhunkm1294/FridayUserbot, but GITHUB_ACCESS_TOKEN must be setup first.",
+      "value": "",
+      "required": false
+    },
+    "pro": {
+      "description": "Enable PRO Access or not.. True to Enable (Recommended not to enable)",
+      "value": "",
+      "required": false
+    },
+    "PM_DATA": {
+      "description": "Enable Private Spam Protection or not.. DISABLE to Disale (Defaultly Enabled)",
+      "value": "",
+      "required": false
+    },
+    "LYDIA_API_KEY": {
+      "description": "Needed for Lydia AI. Follow https://telegra.ph/Lydia-09-05 to get your API.",
+      "value": "",
+      "required": false
+    },
+    "HEROKU_API_KEY": {
+      "description": "Go to https://dashboard.heroku.com/account, scroll down and press Reveal API.Required for updater to work.",
+      "value": ""
+    },
+    "HEROKU_APP_NAME": {
+      "description": "The Value of App Name you filled in right on top.Required for updater to work.",
+      "value": ""
+    },
+    "TG_BOT_TOKEN_BF_HER": {
+      "description": "Needed for inline buttons maker. Make a bot at @BotFather and get the token of your bot. Get it.",
+      "value": ""
+    },
+    "TG_BOT_USER_NAME_BF_HER": {
+      "description": "You Telegram Bot Username Here. Needed For Help Module And Cbutton.",
+      "value": ""
+    },
+    "DOWNLOAD_PFP_URL_CLOCK": {
+      "description": "Needed for autopic module. A url that is a preview link of your Profile Pic",
+      "value": "",
+      "required": false
+    },
+     "ALIVE_IMAGE": {
+      "description": "Enter Image URL for bot pic ",
+      "value": "https://telegra.ph/file/4e1364fb18f899ad47dec.png",
+      "required": false
+    },
+     "PMPERMIT_PIC": {
+      "description": "Enter Image URL for bot's pmsecurity pic ",
+      "value": "https://telegra.ph/file/4e1364fb18f899ad47dec.png",
+      "required": false
+    },    
+    
+    
+    "TZ": {
+      "description": "Required for Correct Time on autopic",
+      "value": "Asia/Colombo",
+      "required": false
+    }
+  },
+  "addons": [
+    {
+      "plan": "heroku-postgresql",
+      "options": {
+        "version": "12"
+      }
+    }
+  ]
+}
