@@ -44,7 +44,7 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Fire-X"
 PM_IMG = Config.ALIVE_IMAGE
 pm_caption = "  __**★ ғɪʀᴇ-x ɪs ʀᴜɴɴɪɴɢ sᴜᴄᴇssғᴜʟʟʏ ★**__\n\n"
 
-pm_caption += f"**━━━━━━━━━━━━━━━━━━━━**\n\n"
+pm_caption += f"**━━━━━━━|━━━━━|━━━━━━**\n\n"
 pm_caption += (
     f"                 ◉✿ ᴍᴀsᴛᴇʀ ✿◉\n  **『😈[{DEFAULTUSER}](tg://user?id={mafia})😈』**\n\n"
 )
