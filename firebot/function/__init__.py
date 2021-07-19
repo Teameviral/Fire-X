@@ -478,10 +478,10 @@ async def apk_dl(app_name, path, event):
         for link in result:
             dl_link = link.get("href")
             r = requests.get(dl_link)
-            with open(f"{path}/{name}@VirtualUserbot.apk", "wb") as f:
+            with open(f"{path}/{name}@firebot.apk", "wb") as f:
                 f.write(r.content)
     await event.edit("`Apk, Downloaded. Let me Upload It here.`")
-    final_path = f"{path}/{name}@VirtualUserbot.apk"
+    final_path = f"{path}/{name}@firebot.apk"
     return final_path, name
 
 
