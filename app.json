@@ -1,7 +1,7 @@
 {
-  "name": "Virtual-Userbot",
-  "description": "A Remix of Userbots on Github By @InukaASiTH",
-  "logo": "https://telegra.ph/file/4e1364fb18f899ad47dec.png",
+  "name": "ғɪʀᴇ-x",
+  "description": "A Remix of Userbots on Github By chrisdroid1 and other unmentioned devs",
+  "logo": "https://telegra.ph/file/8dfa5e4e768a586b1005d.jpg",
   "keywords": [
     "telegram",
     "virtualuserbot",
@@ -9,7 +9,7 @@
     "telegram-virtualuserbot",
     "productivity"
   ],
-  "repository": "https://github.com/inukaasith/virtualuserbot",
+  "repository": "https://github.com/Chrisdroid1/Fire-X",
   "website": "starkgang.ml",
   "success_url": "t.me/FridayOT",
   "stack": "container",
