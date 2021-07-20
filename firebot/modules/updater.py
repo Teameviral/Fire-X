@@ -5,7 +5,8 @@ import sys
 import git
 
 from firebot.Configs import Config
-from firebot.utils import admin_cmd, sudo_cmd
+
+from ..utils import fire_on_cmd as thunder_cmd
 
 # -- Constants -- #
 IS_SELECTED_DIFFERENT_BRANCH = (
@@ -15,24 +16,27 @@ IS_SELECTED_DIFFERENT_BRANCH = (
     "please check out to an official branch, and re-start the updater."
 )
 OFFICIAL_UPSTREAM_REPO = Config.UPSTREAM_REPO
-BOT_IS_UP_TO_DATE = "**The FIRE-X** is up-to-date sur."
-NEW_BOT_UP_DATE_FOUND = (
-    "new update found for {branch_name}\n"
-    "changelog: \n\n{changelog}\n"
-    "updating your FIRE-X ..."
+BOT_IS_UP_TO_DATE = (
+    "Your userbot >> is up-to-date<<."
 )
-NEW_UP_DATE_FOUND = "New update found for {branch_name}\n" "`updating your FIRE-X...`"
+NEW_BOT_UP_DATE_FOUND = (
+    "New Update Found For {branch_name}\n"
+    "ChangeLog: \n\n{changelog}\n"
+    "UPdate Your bot ..."
+)
+NEW_UP_DATE_FOUND = (
+    "Alert! New UPdate here @ {branch_name}\n" "`UPdating your UserBoT...`"
+)
 REPO_REMOTE_NAME = "temponame"
 IFFUCI_ACTIVE_BRANCH_NAME = "master"
 DIFF_MARKER = "HEAD..{remote_name}/{branch_name}"
 NO_HEROKU_APP_CFGD = "no heroku application found, but a key given? 😕 "
 HEROKU_GIT_REF_SPEC = "HEAD:refs/heads/master"
-RESTARTING_APP = "re-starting heroku application"
+RESTARTING_APP = "`Re-starting heroku application`"
 # -- Constants End -- #
 
 
-@borg.on(admin_cmd("update ?(.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="scan ?(.*)", allow_sudo=True))
+@borg.on(thunder_cmd("update", outgoing=True))
 async def updater(message):
     try:
         repo = git.Repo()
@@ -66,24 +70,27 @@ async def updater(message):
     )
 
     if not changelog:
-        await message.edit("`Updation in Progress......`")
-        await asyncio.sleep(5)
-
-    message_one = NEW_BOT_UP_DATE_FOUND.format(
-        branch_name=active_branch_name, changelog=changelog
-    )
-    message_two = NEW_UP_DATE_FOUND.format(branch_name=active_branch_name)
-
-    if len(message_one) > 4095:
-        with open("change.log", "w+", encoding="utf8") as out_file:
-            out_file.write(str(message_one))
-        await tgbot.send_message(
-            message.chat_id, document="change.log", caption=message_two
+        await message.edit(
+            "`No Update AvaiLAbLe if still you want to check just restart bot`"
         )
-        os.remove("change.log")
-    else:
-        await message.edit(message_one)
+        return
+    if message.text[8:] != "now":
+        message_one = NEW_BOT_UP_DATE_FOUND.format(
+            branch_name=active_branch_name, changelog=changelog
+        )
+        message_two = NEW_UP_DATE_FOUND.format(branch_name=active_branch_name)
 
+        if len(message_one) > 4095:
+            with open("change.log", "w+", encoding="utf8") as out_file:
+                out_file.write(str(message_one))
+            await tgbot.send_message(
+                message.chat_id, document="change.log", caption=message_two
+            )
+            os.remove("change.log")
+        else:
+            await message.edit(message_one)
+        await message.respond(f"Do `.update now` to update userbot")
+        return
     temp_upstream_remote.fetch(active_branch_name)
     repo.git.reset("--hard", "FETCH_HEAD")
 
@@ -112,18 +119,18 @@ async def updater(message):
                 else:
                     remote = repo.create_remote("heroku", heroku_git_url)
                 asyncio.get_event_loop().create_task(
-                   deploy_start(tgbot, message, HEROKU_GIT_REF_SPEC, remote)
+                    deploy_start(tgbot, message, HEROKU_GIT_REF_SPEC, remote)
                 )
 
             else:
                 await message.edit(
-                    "Please create the var HEROKU_APP_NAME as the key and the name of your bot in heroku as your value."
+                    "Please create the var `HEROKU_APP_NAME` as the key and the name of your bot in heroku as your value."
                 )
                 return
         else:
             await message.edit(NO_HEROKU_APP_CFGD)
     else:
-        await message.edit("No heroku api key found in HEROKU_API_KEY var")
+        await message.edit("No heroku api key found in `HEROKU_API_KEY` var")
 
 
 def generate_change_log(git_repo, diff_marker):
@@ -135,9 +142,12 @@ def generate_change_log(git_repo, diff_marker):
 
 
 async def deploy_start(tgbot, message, refspec, remote):
+    await asyncio.sleep(2)
+    await message.edit("Almost Done....")
     await message.edit(RESTARTING_APP)
+    await asyncio.sleep(2)
     await message.edit(
-        "Updated your FIRE-X successfully sur!!!\nNow type .ping after 5 mins to check if I'm on🚶😏"
+        "**UpdatinG Your ubot sir!!!\nPlease WaiT FoR 5-10 mins, modules are loading after that type `.alive` to check if I am On**🤗😅"
     )
     remote.push(refspec=refspec)
     await tgbot.disconnect()
