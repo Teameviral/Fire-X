@@ -28,9 +28,9 @@ __FIRE-X__ is **ON!**ツ
 """
     st = time.time()
 
-    await msg.edit(text)
+    await event.edit(text)
 
     et = time.time()
     text += f"\n`{round((et - st), 3)} ms`"
 
-    await msg.edit(text)
+    await event.edit(text)
