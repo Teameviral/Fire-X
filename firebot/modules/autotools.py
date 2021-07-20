@@ -134,7 +134,7 @@ async def autopic(event):
         Config.DOWNLOAD_PFP_URL_CLOCK, downloaded_file_name, progress_bar=True
     )
     downloader.start(blocking=False)
-    photo = "virtualuserbot/photo_pfp.png"
+    photo = "firebot/photo_pfp.png"
     while not downloader.isFinished():
         pass
     if BLOOMSTART:
