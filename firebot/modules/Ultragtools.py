@@ -246,7 +246,7 @@ async def startgmute(event):
         await event.edit("Here A Tape, Now Shutup \nGmuteD")
 
 
-@friday.on(friday_on_cmd(pattern=r"ultraungmute ?(\d+)?"))
+@fire.on(fire_on_cmd(pattern=r"ultraungmute ?(\d+)?"))
 async def endgmute(event):
     private = False
     if event.fwd_from:
