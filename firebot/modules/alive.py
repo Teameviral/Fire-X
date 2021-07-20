@@ -2,7 +2,7 @@
 # CREDITS: @WhySooSerious, @Sur_vivor
 import time
 
-from uniborg.util import friday_on_cmd, sudo_cmd
+from uniborg.util import fire_on_cmd, sudo_cmd
 
 from firebot import ALIVE_NAME, CMD_HELP, Lastupdate
 from firebot.Configs import Config
@@ -58,9 +58,9 @@ pm_caption += f" ||•|| sᴇᴄᴜʀɪᴛʏ ʙʏ ғɪʀᴇ-x ||•||\n"
 pm_caption += " [ɢɪᴛʜᴜʙ](https://github.com/Chrisdroid1/Fire-X) • [ɢʀᴏᴜᴘ](https://t.me/FireXUserBot)"
 
 
-@friday.on(friday_on_cmd(pattern=r"alive"))
-@friday.on(sudo_cmd(pattern=r"alive", allow_sudo=True))
-async def friday(alive):
+@fire.on(fire_on_cmd(pattern=r"alive"))
+@fire.on(sudo_cmd(pattern=r"alive", allow_sudo=True))
+async def chris(alive):
     await alive.get_chat()
     """ For .alive command, check if the bot is running.  """
     await borg.send_file(alive.chat_id, PM_IMG, caption=pm_caption)
