@@ -163,9 +163,7 @@ if ENV:
         OPEN_LOAD_KEY = os.environ.get("OPEN_LOAD_KEY", None)
         UPSTREAM_REPO = os.environ.get(
             "UPSTREAM_REPO", "https://github.com/Chrisdroid1/Fire-X"
-        ALIVE_IMAGE = os.environ.get(
-            "ALIVE_IMAGE", "https://telegra.ph/file/3dd42b44d10528fa1f925.jpg"
-        )
+        ALIVE_IMAGE = os.environ.get("ALIVE_IMAGE", None)
         ASSISTANT_START_PIC = os.environ.get(
             "ASSISTANT_START_PIC",
             "https://telegra.ph/file/c1847e49157e1502f8501.jpg",
