@@ -38,8 +38,8 @@ __FIRE-X__ is **ON!**ツ
 
 CMD_HELP.update(
     {
-        "ping": "__**PLUGIN NAME :** ping__\
-    \n\n📌** CMD ★** `.ping`\
-    \n**USAGE   ★  **Shows you the ping speed of server"
+        "ping": "**Ping**\
+\n\n**Syntax : **`.ping`\
+\n**Usage :** Get speed of your bot."
     }
 )
