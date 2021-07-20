@@ -19,7 +19,7 @@ AUTONAME = os.environ.get("AUTONAME", None)
 DEFAULT_BIO = os.environ.get("DEFAULTBIO", None)
 DEFAULTUSERBIO = str(DEFAULT_BIO) if DEFAULT_BIO else " ᗯᗩᏆᎢᏆᑎᏀ ᏞᏆᏦᗴ ᎢᏆᗰᗴ  "
 CHANGE_TIME = int(os.environ.get("CHANGE_TIME", 60))
-DEFAULTUSER = str(AUTONAME) if AUTONAME else "VirtualUserbot"
+DEFAULTUSER = str(AUTONAME) if AUTONAME else "Fire-X"
 
 FONT_FILE_TO_USE = "Fonts/vermin_vibes.ttf"
 global AUTOPICSTART
@@ -45,7 +45,7 @@ async def autopic(event):
         Var.DOWNLOAD_PFP_URL_CLOCK, downloaded_file_name, progress_bar=False
     )
     downloader.start(blocking=False)
-    photo = "virtualuserbot/photo_pfp.png"
+    photo = "firebot/photo_pfp.png"
     while not downloader.isFinished():
         pass
     input_str = event.pattern_match.group(1)
