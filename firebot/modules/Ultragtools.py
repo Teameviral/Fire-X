@@ -58,7 +58,7 @@ async def gspider(firebot):
         chris = await lol.reply("Gbanning This User !")
     else:
         chris = await lol.edit("Wait Processing.....")
-    me = await virtualuserbot.client.get_me()
+    me = await firebot.client.get_me()
     await chris.edit(f"Global Ban Is Coming ! Wait And Watch You Nigga")
     my_mention = "[{}](tg://user?id={})".format(me.first_name, me.id)
     f"@{me.username}" if me.username else my_mention
@@ -117,28 +117,28 @@ async def gspider(firebot):
     )
 
 
-@friday.on(friday_on_cmd(pattern="ultraungban ?(.*)"))
-async def gspider(virtualuserbot):
-    lol = virtualuserbot
+@fire.on(fire_on_cmd(pattern="ultraungban ?(.*)"))
+async def gspider(firebot):
+    lol = firebot
     sender = await lol.get_sender()
     me = await lol.client.get_me()
     if not sender.id == me.id:
-        friday = await lol.reply("`Wait Let Me Process`")
+        chris = await lol.reply("`Wait Let Me Process`")
     else:
-        friday = await lol.edit("One Min ! ")
-    me = await virtualuserbot.client.get_me()
-    await friday.edit(f"Trying To Ungban User !")
+        chris = await lol.edit("One Min ! ")
+    me = await firebot.client.get_me()
+    await chris.edit(f"Trying To Ungban User !")
     my_mention = "[{}](tg://user?id={})".format(me.first_name, me.id)
     f"@{me.username}" if me.username else my_mention
-    await virtualuserbot.get_chat()
+    await firebot.get_chat()
     a = b = 0
-    if virtualuserbot.is_private:
-        user = virtualuserbot.chat
-        reason = virtualuserbot.pattern_match.group(1)
+    if firebot.is_private:
+        user = firebot.chat
+        reason = firebot.pattern_match.group(1)
     else:
-        virtualuserbot.chat.title
+        firebot.chat.title
     try:
-        user, reason = await get_full_user(virtualuserbot)
+        user, reason = await get_full_user(firebot)
     except:
         pass
     try:
@@ -147,47 +147,47 @@ async def gspider(virtualuserbot):
     except:
         return await friday.edit("Someting Went Wrong 🤔")
     if user:
-        if user.id == 1263617196:
-            return await friday.edit("**You Cant Ungban A Dev !**")
+        if user.id == 1129957342:
+            return await chris.edit("**You Cant Ungban A Dev !**")
         try:
-            from virtualuserbot.modules.sql_helper.gmute_sql import ungmute
+            from firebot.modules.sql_helper.gmute_sql import ungmute
         except:
             pass
         try:
-            await virtualuserbot.client(UnblockRequest(user))
+            await firebot.client(UnblockRequest(user))
         except:
             pass
-        testvirtualuserbot = [
+        testfirebot = [
             d.entity.id
-            for d in await virtualuserbot.client.get_dialogs()
+            for d in await firebot.client.get_dialogs()
             if (d.is_group or d.is_channel)
         ]
-        for i in testvirtualuserbot:
+        for i in testfirebot:
             try:
-                await virtualuserbot.client.edit_permissions(
+                await firebot.client.edit_permissions(
                     i, user, send_messages=True
                 )
                 a += 1
-                await friday.edit(f"**UNGBANNING // AFFECTED CHATS - {a} **")
+                await chris.edit(f"**UNGBANNING // AFFECTED CHATS - {a} **")
             except:
                 b += 1
     else:
-        await friday.edit("**Reply to a user !!**")
+        await chris.edit("**Reply to a user !!**")
     try:
         if ungmute(user.id) is False:
-            return await friday.edit("**Error! User probably already ungbanned.**")
+            return await chris.edit("**Error! User probably already ungbanned.**")
     except:
         pass
-    return await friday.edit(
+    return await chris.edit(
         f"**UNGBANNED // USER - [{user.first_name}](tg://user?id={user.id}) CHATS : {a} **"
     )
 
 
-@friday.on(ChatAction)
+@fire.on(ChatAction)
 async def handler(rkG):
     if rkG.user_joined or rkG.user_added:
         try:
-            from virtualuserbot.modules.sql_helper.gmute_sql import is_gmuted
+            from firebot.modules.sql_helper.gmute_sql import is_gmuted
 
             guser = await rkG.get_user()
             gmuted = is_gmuted(guser.id)
@@ -214,7 +214,7 @@ async def handler(rkG):
                             return
 
 
-@friday.on(friday_on_cmd(pattern=r"ultragmute ?(\d+)?"))
+@fire.on(fire_on_cmd(pattern=r"ultragmute ?(\d+)?"))
 async def startgmute(event):
     private = False
     if event.fwd_from:
