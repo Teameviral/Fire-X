@@ -1,11 +1,11 @@
 import asyncio
 
 from firebot import CMD_HELP
-from firebot.utils import friday_on_cmd
+from firebot.utils import fire_on_cmd
 
 
 # @command(pattern="^.cmds", outgoing=True)
-@friday.on(friday_on_cmd(pattern=r"cmds"))
+@fire.on(fire_on_cmd(pattern=r"cmds"))
 async def install(event):
     if event.fwd_from:
         return
