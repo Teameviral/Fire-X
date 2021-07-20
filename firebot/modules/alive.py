@@ -65,3 +65,12 @@ async def friday(alive):
     """ For .alive command, check if the bot is running.  """
     await borg.send_file(alive.chat_id, PM_IMG, caption=pm_caption)
     await alive.delete()
+
+
+CMD_HELP.update(
+    {
+        "alive": "**ALive**\
+\n\n**Syntax : **`.alive`\
+\n**Usage :** Check if Fire-X UserBot is Alive"
+    }
+)
