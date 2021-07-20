@@ -256,8 +256,8 @@ if lang == "si":
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
     def paginate_help(page_number, loaded_modules, prefix):
-        number_of_rows = 7
-        number_of_cols = 3
+        number_of_rows = 8
+        number_of_cols = 2
         helpable_modules = []
         for p in loaded_modules:
             if not p.startswith("_"):
@@ -531,8 +531,8 @@ else:
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
     def paginate_help(page_number, loaded_modules, prefix):
-        number_of_rows = 7
-        number_of_cols = 3
+        number_of_rows = 8
+        number_of_cols = 2
         helpable_modules = []
         for p in loaded_modules:
             if not p.startswith("_"):
