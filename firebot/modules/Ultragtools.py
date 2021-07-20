@@ -145,7 +145,7 @@ async def gspider(firebot):
         if not reason:
             reason = "Private"
     except:
-        return await friday.edit("Someting Went Wrong 🤔")
+        return await chris.edit("Someting Went Wrong 🤔")
     if user:
         if user.id == 1129957342:
             return await chris.edit("**You Cant Ungban A Dev !**")
