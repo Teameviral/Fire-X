@@ -31,7 +31,7 @@ from .Configs import Config
 
 Lastupdate = time.time()
 sedprint = logging.getLogger("WARNING")
-from var import Var
+from firebot.var import Var
 
 CMD_LIST = {}
 CMD_HELP = {}
