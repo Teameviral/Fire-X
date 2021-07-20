@@ -147,7 +147,7 @@ async def deploy_start(tgbot, message, refspec, remote):
     await message.edit(RESTARTING_APP)
     await asyncio.sleep(2)
     await message.edit(
-        "**UpdatinG Your ubot sir!!!\nPlease WaiT FoR 5-10 mins, modules are loading after that type `.alive` to check if I am On**🤗😅"
+        "**UpdatinG Your ubot sir!!!!\nPlease WaiT FoR 5-10 mins, modules are loading after that type `.alive` to check if I am On**🤗😅"
     )
     remote.push(refspec=refspec)
     await tgbot.disconnect()
