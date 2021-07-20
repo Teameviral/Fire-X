@@ -2,8 +2,8 @@ import asyncio
 from datetime import datetime
 import time
 
-from .. import ALIVE_NAME, CMD_HELP
-from ..utils import admin_cmd, sudo_cmd, edit_or_reply
+from firebot import ALIVE_NAME, CMD_HELP
+from firebot.utils import admin_cmd, sudo_cmd, edit_or_reply
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Fire-X"
 
