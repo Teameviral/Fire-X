@@ -28,9 +28,9 @@ async def spammer(e):
 
 @bot.on(admin_cmd(pattern="bigspam"))
 @bot.on(sudo_cmd(pattern="bigspam", allow_sudo=True))
-async def bigspam(Fire):
+async def bigspam(fire):
     if not fire.text[0].isalpha() and fire.text[0] not in ("/", "#", "@", "!"):
-        fire_msg = Fire.text
+        fire_msg = fire.text
         firebot_count = int(fire_msg[9:13])
         fire_spam = str(fire.text[13:])
         for i in range(1, firebot_count):
