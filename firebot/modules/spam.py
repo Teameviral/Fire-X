@@ -86,11 +86,20 @@ async def tiny_pic_spam(e):
             f"**Error**\nUsage `!mspam <count> reply to a sticker/gif/photo/video`"
         )
 
+
 CMD_HELP.update(
     {
-        "spam", "<number> <text>", "Sends the text 'X' number of times.", ".spam 99 Hello"
-        "mspam", "<reply to media> <number>", "Sends the replied media (gif/ video/ sticker/ pic) 'X' number of times", ".mspam 100 <reply to media>"
-        "dspam", "<delay> <spam count> <text>", "Sends the text 'X' number of times in 'Y' seconds of delay", ".dspam 5 100 Hello"
-        "bigspam", "<count> <text>", "Sends the text 'X' number of times. This what mafiabot iz known for. The Best BigSpam Ever", ".bigspam 5000"   
+        "Spam": "**Spam**\
+\n\n**Syntax : **`<number> <text>, Sends the text 'X' number of times`\
+\n**Usage :** Spam words and limit is 99 that is .spam 99 hello\
+        "mspam": "**mspam**\
+\n\n**Syntax : **`<reply to media> <number>`\
+\n**Usage :** Sends the replied media (gif/ video/ sticker/ pic) 'X' number of times, .mspam 100 <reply to media>\
+        "dspam": "**dspam**\
+\n\n**Syntax : **`<delay> <spam count> <text>`\
+\n**Usage :** Sends the text 'X' number of times in 'Y' seconds of delay, .dspam 5 100 Hello\
+        "bigspam": "**bigspam**\
+\n\n**Syntax : **`<count> <text>`\
+\n**Usage :** Sends the text 'X' number of times. This what firebot is known for. The Best BigSpam Ever, .bigspam 5000 Hello"
     }
 )
