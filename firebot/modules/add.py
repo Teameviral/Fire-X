@@ -11,7 +11,7 @@ Syntax: .invite <User(s)>"""
 from telethon import functions
 
 from firebot import CMD_HELP
-from firebot.utils import edit_or_reply, friday_on_cmd, sudo_cmd
+from firebot.utils import edit_or_reply, fire_on_cmd, sudo_cmd
 
 
 @fire.on(fire_on_cmd(pattern="invite ?(.*)"))
