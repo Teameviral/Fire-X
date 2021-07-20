@@ -34,3 +34,12 @@ __FIRE-X__ is **ON!**ツ
     text += f"\n`{round((et - st), 3)} ms`"
 
     await event.edit(text)
+
+
+CMD_HELP.update(
+    {
+        "ping": "__**PLUGIN NAME :** ping__\
+    \n\n📌** CMD ★** `.ping`\
+    \n**USAGE   ★  **Shows you the ping speed of server"
+    }
+)
