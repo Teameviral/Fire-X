@@ -1,6 +1,6 @@
 from var import Var
 from firebot.Configs import Config
-from firebot.utils import friday_on_cmd
+from firebot.utils import fire_on_cmd
 
 issudousing = Config.SUDO_USERS
 islogokay = Config.PRIVATE_GROUP_ID
