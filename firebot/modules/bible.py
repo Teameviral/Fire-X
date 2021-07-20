@@ -46,8 +46,8 @@ async def _(event):
 <u>Verse</u> : {verse}
 <u>Reference</u> : {ref}
 <u>Text</u> : {texr.strip()}
-<u>By VirtualUserbot. Special thanks to @FridayOT
-Get Your VirtualUserbot From @Infinity_Bots</u></b>
+<u>By FIRE-X.
+Get Your FIRE-X From @FIRE_X_CHANNEL</u></b>
 """
         await borg.send_message(
             event.chat_id,
