@@ -265,7 +265,7 @@ from time import gmtime, strftime
 
 from telethon import events
 
-from virtualuserbot import bot
+from firebot import bot
 
 
 def register(**args):
@@ -652,8 +652,8 @@ def start_assistant(shortname):
         import sys
         from pathlib import Path
 
-        path = Path(f"virtualuserbot/modules/assistant/{shortname}.py")
-        name = "virtualuserbot.modules.assistant.{}".format(shortname)
+        path = Path(f"firebot/modules/assistant/{shortname}.py")
+        name = "firebot.modules.assistant.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
@@ -664,8 +664,8 @@ def start_assistant(shortname):
         import sys
         from pathlib import Path
 
-        path = Path(f"virtualuserbot/modules/assistant/{shortname}.py")
-        name = "virtualuserbot.modules.assistant.{}".format(shortname)
+        path = Path(f"firebot/modules/assistant/{shortname}.py")
+        name = "firebot.modules.assistant.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         mod.tgbot = bot.tgbot
@@ -681,5 +681,5 @@ def start_assistant(shortname):
         mod.peru_only = peru_only()
         mod.only_pvt = only_pvt()
         spec.loader.exec_module(mod)
-        sys.modules["virtualuserbot.modules.assistant" + shortname] = mod
+        sys.modules["firebot.modules.assistant" + shortname] = mod
         sedprint.info("Assistant Has imported " + shortname)
