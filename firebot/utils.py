@@ -126,7 +126,7 @@ def load_module(shortname):
         mod.logger = logging.getLogger(shortname)
         # support for uniborg
         sys.modules["uniborg.util"] = firebot.utils
-        sys.modules["friday.util"] = firebot.utils
+        sys.modules["fire.util"] = firebot.utils
         sys.modules["userbot.utils"] = firebot.utils
         sys.modules["userbot.plugins"] = firebot.modules
         sys.modules["plugins"] = firebot.modules
@@ -138,7 +138,7 @@ def load_module(shortname):
         mod.am_i_admin = am_i_admin()
         mod.ignore_fwd = ignore_fwd()
         mod.borg = bot
-        mod.friday = bot
+        mod.fire = bot
         # support for paperplaneextended
         sys.modules["firebot.events"] = firebot.utils
         spec.loader.exec_module(mod)
