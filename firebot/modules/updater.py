@@ -4,7 +4,7 @@ import sys
 
 import git
 
-from firebot.Config import Config
+from firebot.Configs import Config
 from firebot.utils import admin_cmd, sudo_cmd
 
 # -- Constants -- #
