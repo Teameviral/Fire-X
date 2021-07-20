@@ -1,5 +1,4 @@
-# Copyright (C) By @StarkGang And @ZeltraxRockz
-# Powered By @Nemo_Projects
+# hnn
 import random
 import string
 
