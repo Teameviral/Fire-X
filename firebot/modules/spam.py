@@ -1,19 +1,18 @@
 import asyncio
-from asyncio import wait
+import base64
+import os
+
+from telethon import functions, types
+from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 from firebot import CMD_HELP
+from firebot.utils import admin_cmd, sudo_cmd, edit_or_reply
+from firebot.Configs import Config
 
+LOGGER = Config.PLUGIN_CHANNEL
+SUDO_WALA = Config.SUDO_USERS
 
-from firebot.events import register
-
-@register(outgoing=True, pattern="^.tspam")
-async def tmeme(e):
-    tspam = str(e.text[7:])
-    message = tspam.replace(" ", "")
-    for letter in message:
-        await e.respond(letter)
-    await e.delete()
-
-@register(outgoing=True, pattern="^.spam")
+@bot.on(admin_cmd(pattern="spam (.*)"))
+@bot.on(sudo_cmd(pattern="spam (.*)", allow_sudo=True))
 async def spammer(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         message = e.text
@@ -21,53 +20,77 @@ async def spammer(e):
         spam_message = str(e.text[8:])
         await asyncio.wait([e.respond(spam_message) for i in range(counter)])
         await e.delete()
-        
-                               
-@register(outgoing=True, pattern="^.bigspam")
-async def bigspam(e):
-    if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
-        message = e.text
-        counter = int(message[9:13])
-        spam_message = str(e.text[13:])
-        for i in range(1, counter):
-            await e.respond(spam_message)
-        await e.delete()
-        
-        
-        
+        if LOGGER:
+            await e.client.send_message(
+                LOGGER_GROUP, "#SPAM \n\n" "Spam was executed successfully"
+            )
 
-@register(outgoing=True, pattern="^.mspam")
-async def tiny_pic_spam(e):
-    reply = await e.get_reply_message()
-    if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
-        message = e.text
-        text = message.split()
-        counter = int(text[1])
-        media = await e.client.download_media(reply)
-        for i in range(1, counter):
-            await e.client.send_file(e.chat_id, media)
-        await e.delete()
-        
 
-@register(outgoing=True, pattern="^.delayspam (.*)")
+@bot.on(admin_cmd(pattern="bigspam"))
+@bot.on(sudo_cmd(pattern="bigspam", allow_sudo=True))
+async def bigspam(Fire):
+    if not fire.text[0].isalpha() and fire.text[0] not in ("/", "#", "@", "!"):
+        fire_msg = Fire.text
+        firebot_count = int(fire_msg[9:13])
+        fire_spam = str(fire.text[13:])
+        for i in range(1, firebot_count):
+            await fire.respond(fire_spam)
+        await fire.delete()
+        if LOGGER:
+            await mafia.client.send_message(
+                LOGGER_GROUP, "#BIGSPAM \n\n" "Bigspam was executed successfully"
+            )
+
+
+@bot.on(admin_cmd("dspam (.*)"))
+@bot.on(sudo_cmd(pattern="dspam (.*)", allow_sudo=True))
 async def spammer(e):
-    spamDelay = float(e.pattern_match.group(1).split(' ', 2)[0])
-    counter = int(e.pattern_match.group(1).split(' ', 2)[1])
-    spam_message = str(e.pattern_match.group(1).split(' ', 2)[2])
+    if e.fwd_from:
+        return
+    input_str = "".join(e.text.split(maxsplit=1)[1:])
+    spamDelay = float(input_str.split(" ", 2)[0])
+    counter = int(input_str.split(" ", 2)[1])
+    spam_message = str(input_str.split(" ", 2)[2])
     await e.delete()
-    for i in range(1, counter):
+    for _ in range(counter):
         await e.respond(spam_message)
         await asyncio.sleep(spamDelay)
-    
+
+#@register(outgoing=True, pattern="^.mspam (.*)")
+@bot.on(admin_cmd(pattern="mspam (.*)"))
+@bot.on(sudo_cmd(pattern="mspam (.*)", allow_sudo=True))
+async def tiny_pic_spam(e):
+    sender = await e.get_sender()
+    me = await e.client.get_me()
+    if not sender.id == me.id and not SUDO_WALA:
+        return await e.reply("`Sorry sudo users cant access this command..`")
+    try:
+        await e.delete()
+    except:
+        pass
+    try:
+        counter = int(e.pattern_match.group(1).split(" ", 1)[0])
+        reply_message = await e.get_reply_message()
+        if (
+            not reply_message
+            or not e.reply_to_msg_id
+            or not reply_message.media
+            or not reply_message.media
+        ):
+            return await e.edit("```Reply to a pic/sticker/gif/video message```")
+        message = reply_message.media
+        for i in range(1, counter):
+            await e.client.send_file(e.chat_id, message)
+    except:
+        return await e.reply(
+            f"**Error**\nUsage `!mspam <count> reply to a sticker/gif/photo/video`"
+        )
+
 CMD_HELP.update(
     {
-        "spam": ".spam <no of msgs> <your msg>"
-        "\nUsage: spams the current chat, the current limit for this is from 1 to 99.\n\n"
-        ".bigspam <no of msgs> <your msg>"
-        "\nUsage: Spams the current chat, the current limit is above 100.\n\n"
-        ".mspam <no of spam> (with reply to media)"
-        "\nUsage: Spams the current chat with number you did put in <no of spam>.\n\n"
-        ".delayspam <delay time> <count> <msg>"
-        "\nUsage: Spams the current chat with with the input msgs with a delay time that has been given as its input.\n\n"
+        "spam", "<number> <text>", "Sends the text 'X' number of times.", ".spam 99 Hello"
+        "mspam", "<reply to media> <number>", "Sends the replied media (gif/ video/ sticker/ pic) 'X' number of times", ".mspam 100 <reply to media>"
+        "dspam", "<delay> <spam count> <text>", "Sends the text 'X' number of times in 'Y' seconds of delay", ".dspam 5 100 Hello"
+        "bigspam", "<count> <text>", "Sends the text 'X' number of times. This what mafiabot iz known for. The Best BigSpam Ever", ".bigspam 5000"   
     }
 )
