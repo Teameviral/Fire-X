@@ -2,7 +2,7 @@
 
 import heroku3
 
-from var import Var
+from firebot.var import Var
 
 herokuclient = heroku3.from_key(Var.HEROKU_API_KEY)
 
