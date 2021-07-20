@@ -53,7 +53,7 @@ pm_caption += f"┣•➳➠ `ᴛᴇʟᴇᴛʜᴏɴ:` `{version.__version__}` \n
 pm_caption += f"┣•➳➠ `ᴠᴇʀsɪᴏɴ:` `{currentversion}`\n"
 pm_caption += f"┣•➳➠ `ᴜᴘᴛɪᴍᴇ:` `{uptime}`\n"
 pm_caption += f"┣•➳➠ `ᴄʜᴀɴɴᴇʟ:` [ᴊᴏɪɴ](https://t.me/Fire_X_CHANNEL)\n"
-pm_caption += f"┗━━━━━━━━━━━━━━━━━━━\n\n"
+pm_caption += f"┗━━━━━━━━━━━━━━━━━━━\n"
 pm_caption += f" ||•|| sᴇᴄᴜʀɪᴛʏ ʙʏ ғɪʀᴇ-x ||•||\n"
 pm_caption += " [ɢɪᴛʜᴜʙ](https://github.com/Chrisdroid1/Fire-X) • [ɢʀᴏᴜᴘ](https://t.me/FireXUserBot)"
 
