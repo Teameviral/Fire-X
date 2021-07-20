@@ -21,7 +21,7 @@ DEFAULTUSERBIO = str(DEFAULT_BIO) if DEFAULT_BIO else " ᗯᗩᏆᎢᏆᑎᏀ �
 CHANGE_TIME = int(os.environ.get("CHANGE_TIME", 60))
 DEFAULTUSER = str(AUTONAME) if AUTONAME else "VirtualUserbot"
 
-FONT_FILE_TO_USE = "Fonts/digital.ttf"
+FONT_FILE_TO_USE = "Fonts/vermin_vibes.ttf"
 global AUTOPICSTART
 global DIGITALPICSTART
 global BLOOMSTART
@@ -40,7 +40,7 @@ async def autopic(event):
     if event.fwd_from:
         return
     global AUTOPICSTART
-    downloaded_file_name = "virtualuserbot/original_pic.png"
+    downloaded_file_name = "firebot/original_pic.png"
     downloader = SmartDL(
         Var.DOWNLOAD_PFP_URL_CLOCK, downloaded_file_name, progress_bar=False
     )
@@ -87,13 +87,13 @@ async def main(event):
     if event.fwd_from:
         return
     global DIGITALPICSTART
-    poto = "virtualuserbot/poto_pfp.png"
+    poto = "firebot/poto_pfp.png"
     cat = str(
         base64.b64decode(
             "aHR0cHM6Ly90ZWxlZ3JhLnBoL2ZpbGUvYWVhZWJlMzNiMWYzOTg4YTBiNjkwLmpwZw=="
         )
     )[2:51]
-    downloaded_file_name = "virtualuserbot/original_pic.png"
+    downloaded_file_name = "firebot/original_pic.png"
     downloader = SmartDL(cat, downloaded_file_name, progress_bar=False)
     downloader.start(blocking=False)
     if DIGITALPICSTART:
@@ -129,7 +129,7 @@ async def autopic(event):
     if event.fwd_from:
         return
     global BLOOMSTART
-    downloaded_file_name = "virtualuserbot/original_pic.png"
+    downloaded_file_name = "firebot/original_pic.png"
     downloader = SmartDL(
         Config.DOWNLOAD_PFP_URL_CLOCK, downloaded_file_name, progress_bar=True
     )
