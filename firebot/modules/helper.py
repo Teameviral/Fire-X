@@ -1,10 +1,10 @@
 from firebot import ALIVE_NAME, CMD_LIST, lang
-from firebot.utils import friday_on_cmd
+from firebot.utils import fire_on_cmd
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Fire-X"
 
 
-@borg.on(friday_on_cmd(pattern="help ?(.*)"))
+@borg.on(fire_on_cmd(pattern="help ?(.*)"))
 async def cmd_list(event):
     if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
         tgbotusername = Var.TG_BOT_USER_NAME_BF_HER
