@@ -17,7 +17,7 @@ from telegraph import Telegraph, exceptions, upload_file
 from telethon import TelegramClient
 from telethon.sessions import StringSession
 
-from var import Var
+from firebot.var import Var
 
 if Var.STRING_SESSION:
     session_name = str(Var.STRING_SESSION)
