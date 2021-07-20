@@ -4,9 +4,8 @@ import sys
 
 import git
 
-from firebot.Configs import Config
-
-from ..utils import friday_on_cmd as lightning_cmd
+from firebot.Config import Config
+from firebot.utils import admin_cmd, sudo_cmd
 
 # -- Constants -- #
 IS_SELECTED_DIFFERENT_BRANCH = (
@@ -16,27 +15,24 @@ IS_SELECTED_DIFFERENT_BRANCH = (
     "please check out to an official branch, and re-start the updater."
 )
 OFFICIAL_UPSTREAM_REPO = Config.UPSTREAM_REPO
-BOT_IS_UP_TO_DATE = (
-    "Yaour userbot >> is up-to-date<<."
-)
+BOT_IS_UP_TO_DATE = "**The FIRE-X** is up-to-date sur."
 NEW_BOT_UP_DATE_FOUND = (
-    "New Update Found For {branch_name}\n"
-    "ChangeLog: \n\n{changelog}\n"
-    "UPdate Your bot ..."
+    "new update found for {branch_name}\n"
+    "changelog: \n\n{changelog}\n"
+    "updating your FIRE-X ..."
 )
-NEW_UP_DATE_FOUND = (
-    "Alert! New UPdate here @ {branch_name}\n" "`UPdating your UserBoT...`"
-)
+NEW_UP_DATE_FOUND = "New update found for {branch_name}\n" "`updating your FIRE-X...`"
 REPO_REMOTE_NAME = "temponame"
 IFFUCI_ACTIVE_BRANCH_NAME = "master"
 DIFF_MARKER = "HEAD..{remote_name}/{branch_name}"
 NO_HEROKU_APP_CFGD = "no heroku application found, but a key given? 😕 "
 HEROKU_GIT_REF_SPEC = "HEAD:refs/heads/master"
-RESTARTING_APP = "`Re-starting heroku application`"
+RESTARTING_APP = "re-starting heroku application"
 # -- Constants End -- #
 
 
-@borg.on(lightning_cmd("update", outgoing=True))
+@borg.on(admin_cmd("update ?(.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern="scan ?(.*)", allow_sudo=True))
 async def updater(message):
     try:
         repo = git.Repo()
@@ -70,27 +66,24 @@ async def updater(message):
     )
 
     if not changelog:
-        await message.edit(
-            "`No Update AvaiLAbLe if still you want to check just restart bot`"
-        )
-        return
-    if message.text[8:] != "now":
-        message_one = NEW_BOT_UP_DATE_FOUND.format(
-            branch_name=active_branch_name, changelog=changelog
-        )
-        message_two = NEW_UP_DATE_FOUND.format(branch_name=active_branch_name)
+        await message.edit("`Updation in Progress......`")
+        await asyncio.sleep(5)
 
-        if len(message_one) > 4095:
-            with open("change.log", "w+", encoding="utf8") as out_file:
-                out_file.write(str(message_one))
-            await tgbot.send_message(
-                message.chat_id, document="change.log", caption=message_two
-            )
-            os.remove("change.log")
-        else:
-            await message.edit(message_one)
-        await message.respond(f"Do `.update now` to update userbot")
-        return
+    message_one = NEW_BOT_UP_DATE_FOUND.format(
+        branch_name=active_branch_name, changelog=changelog
+    )
+    message_two = NEW_UP_DATE_FOUND.format(branch_name=active_branch_name)
+
+    if len(message_one) > 4095:
+        with open("change.log", "w+", encoding="utf8") as out_file:
+            out_file.write(str(message_one))
+        await tgbot.send_message(
+            message.chat_id, document="change.log", caption=message_two
+        )
+        os.remove("change.log")
+    else:
+        await message.edit(message_one)
+
     temp_upstream_remote.fetch(active_branch_name)
     repo.git.reset("--hard", "FETCH_HEAD")
 
@@ -142,13 +135,12 @@ def generate_change_log(git_repo, diff_marker):
 
 
 async def deploy_start(tgbot, message, refspec, remote):
-    await asyncio.sleep(2)
-    await message.edit("Almost Done....")
     await message.edit(RESTARTING_APP)
-    await asyncio.sleep(2)
     await message.edit(
-        "**UpdatinG Your ubot sir!!!\nPlease WaiT FoR 5-10 mins, modules are loading after that type `.alive` to check if I am On**🤗😅"
+        "Updated your FIRE-X successfully sur!!!\nNow type `.ping` after 5 mins to check if I'm on🚶😏"
     )
     await remote.push(refspec=refspec)
     await tgbot.disconnect()
     os.execl(sys.executable, sys.executable, *sys.argv)
+  
+  
