@@ -178,7 +178,7 @@ async def get_all_modules(event, borg, channel_id):
     for sed in a_plugins:
         try:
             downloaded_file_name = await borg.download_media(
-                sed, "virtualuserbot/modules/"
+                sed, "firebot/modules/"
             )
             if "(" not in downloaded_file_name:
                 path1 = Path(downloaded_file_name)
