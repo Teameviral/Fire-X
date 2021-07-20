@@ -70,7 +70,7 @@ async def gspider(firebot):
     else:
         firebot.chat.title
     try:
-        user, reason = await get_full_user(virtualuserbot)
+        user, reason = await get_full_user(firebot)
     except:
         pass
     try:
