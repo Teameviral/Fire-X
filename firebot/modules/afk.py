@@ -21,7 +21,7 @@ afk_start = {}
 
 if lang == "si":
 
-    @friday.on(
+    @fire.on(
         events.NewMessage(pattern=r"\.afk ?(.*)", outgoing=True)
     )  # pylint:disable=E0602
     async def _(event):
@@ -68,7 +68,7 @@ if lang == "si":
             except Exception as e:  # pylint:disable=C0103,W0703
                 logger.warn(str(e))  # pylint:disable=E0602
 
-    @friday.on(events.NewMessage(outgoing=True))  # pylint:disable=E0602
+    @fire.on(events.NewMessage(outgoing=True))  # pylint:disable=E0602
     async def set_not_afk(event):
         global USER_AFK  # pylint:disable=E0602
         global afk_time  # pylint:disable=E0602
@@ -106,7 +106,7 @@ if lang == "si":
             USER_AFK = {}  # pylint:disable=E0602
             afk_time = None  # pylint:disable=E0602
 
-    @friday.on(
+    @fire.on(
         events.NewMessage(  # pylint:disable=E0602
             incoming=True, func=lambda e: bool(e.mentioned or e.is_private)
         )
@@ -174,7 +174,7 @@ if lang == "si":
 
 else:
 
-    @friday.on(
+    @fire.on(
         events.NewMessage(pattern=r"\.afk ?(.*)", outgoing=True)
     )  # pylint:disable=E0602
     async def _(event):
@@ -221,7 +221,7 @@ else:
             except Exception as e:  # pylint:disable=C0103,W0703
                 logger.warn(str(e))  # pylint:disable=E0602
 
-    @friday.on(events.NewMessage(outgoing=True))  # pylint:disable=E0602
+    @fire.on(events.NewMessage(outgoing=True))  # pylint:disable=E0602
     async def set_not_afk(event):
         global USER_AFK  # pylint:disable=E0602
         global afk_time  # pylint:disable=E0602
@@ -259,7 +259,7 @@ else:
             USER_AFK = {}  # pylint:disable=E0602
             afk_time = None  # pylint:disable=E0602
 
-    @friday.on(
+    @fire.on(
         events.NewMessage(  # pylint:disable=E0602
             incoming=True, func=lambda e: bool(e.mentioned or e.is_private)
         )
