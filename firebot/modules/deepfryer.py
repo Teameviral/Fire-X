@@ -7,9 +7,9 @@ from PIL import Image, ImageEnhance, ImageOps
 from telethon.tl.types import DocumentAttributeFilename
 from uniborg.util import fire_on_cmd
 
-from fire import CMD_HELP
-from fire.function import convert_to_image
-from fire.utils import fire_on_cmd
+from firebot import CMD_HELP
+from firebot.function import convert_to_image
+from firebot.utils import fire_on_cmd
 
 sedpath = "./chrisgang/"
 if not os.path.isdir(sedpath):
