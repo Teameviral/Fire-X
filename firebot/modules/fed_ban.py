@@ -96,7 +96,7 @@ async def _(event):
     )
 
 
-@friday.on(friday_on_cmd(pattern="unfban ?(.*)"))
+@fire.on(fire_on_cmd(pattern="unfban ?(.*)"))
 async def _(event):
     lol_s = event.pattern_match.group(1)
     if lol_s == None:
