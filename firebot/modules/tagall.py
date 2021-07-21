@@ -3,7 +3,7 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 from uniborg.util import fire_on_cmd
 
-from fireboy import CMD_HELP
+from firebot import CMD_HELP
 
 
 @fire.on(fire_on_cmd(pattern="tagall"))
