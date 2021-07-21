@@ -1,4 +1,5 @@
 from firebot import ALIVE_NAME
+from telethon import version
 from firebot.modules import currentversion
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Unknown"
