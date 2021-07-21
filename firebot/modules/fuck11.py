@@ -517,7 +517,7 @@ async def _(event):
 [ 16:58:55] [START] service requested`""",
         """`[ 16:58:55] Tunnel Type HTTP Proxy ➔ SSH (Custom Payload)
 [ 16:58:55] [START] service requested
-[ 16:58:55] Network Status: CONNECTED  to WIFI "VirtualUserbot"
+[ 16:58:55] Network Status: CONNECTED  to WIFI "Fire-X UB"
 [2021-01-12 16:58:55] Injector Service Started`""",
         """`[ 16:58:55] Tunnel Type HTTP Proxy ➔ SSH (Custom Payload)
 [ 16:58:55] [START] service requested
