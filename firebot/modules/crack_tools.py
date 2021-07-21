@@ -83,7 +83,7 @@ async def zee5(event):
         return
     with open("hits.txt", "w") as hitfile:
         for s in hits_dict:
-            hitfile.write(s + " | @FridayOT\n")
+            hitfile.write(s + " | @FIRE_X_CHANNEL\n")
     await borg.send_file(
         event.chat_id,
         "hits.txt",
@@ -132,7 +132,7 @@ async def vypr(event):
         return
     with open("hits.txt", "w") as hitfile:
         for s in hits_dict:
-            hitfile.write(s + " | @VirtualUserbot\n")
+            hitfile.write(s + " | @FIRE_X_CHANNEL\n")
     await borg.send_file(
         event.chat_id,
         "hits.txt",
@@ -191,7 +191,7 @@ async def vortex(event):
         return
     with open("hits.txt", "w") as hitfile:
         for s in hits_dict:
-            hitfile.write(s + " | @FridayOT\n")
+            hitfile.write(s + " | @FIRE_X_CHANNEL\n")
     await borg.send_file(
         event.chat_id,
         "hits.txt",
@@ -247,7 +247,7 @@ async def vortex(event):
         return
     with open("hits.txt", "w") as hitfile:
         for s in hits_dict:
-            hitfile.write(s + " | @VirtualUserbot\n")
+            hitfile.write(s + " | @FIRE_X_CHANNEL\n")
     await borg.send_file(
         event.chat_id,
         "hits.txt",
@@ -294,13 +294,13 @@ async def _(event):
     elif Counter >= 1:
         file1 = open("goood.txt", "a")
         file1.write(
-            "\nCHECKED BY VirtualUserbot. GET YOUR OWN FRIDAY FROM @VirtualUserbot. "
+            "\nCHECKED BY Fire-X. "
         )
         file1.close()
         await borg.send_file(
             event.chat_id,
             "goood.txt",
-            caption=f"**PROXIES CHECKED**\n**GOOD PROXIES: ** {Counter}\n\n**CHECKED BY FRIDAY. GET YOUR OWN FRIDAY FROM @FRIDAYCHAT.**",
+            caption=f"**PROXIES CHECKED**\n**GOOD PROXIES: ** {Counter}\n\n**CHECKED BY FIre-X. GET YOUR OWN FIRE-X FROM @FIRE_X_CHANNEL**",
         )
         os.remove(escobar)
         os.remove("goood.txt")
@@ -358,7 +358,7 @@ async def voot(event):
                     return
                 with open("hits.txt", "w") as hitfile:
                     for s in good_dict:
-                        hitfile.write(s + " | @VirtualUserbot")
+                        hitfile.write(s + " | @FIRE_X_CHANNEL")
                     await borg.send_file(
                         event.chat_id,
                         "hits.txt",
@@ -372,7 +372,7 @@ async def voot(event):
         return
     with open("hits.txt", "w") as hitfile:
         for s in good_dict:
-            hitfile.write(s + " | @VirtualUserbot\n")
+            hitfile.write(s + " | @FIRE_X_CHANNEL\n")
     await borg.send_file(
         event.chat_id,
         "hits.txt",
@@ -422,7 +422,7 @@ async def altbalaji(event):
         return
     with open("hits.txt", "w") as hitfile:
         for s in hits_dict:
-            hitfile.write(s + " | @VirtualUserbot\n")
+            hitfile.write(s + " | @FIRE_X_CHANNEL\n")
     await borg.send_file(
         event.chat_id,
         "hits.txt",
@@ -472,7 +472,7 @@ async def altbalaji(event):
         return
     with open("hits.txt", "w") as hitfile:
         for s in hits_dict:
-            hitfile.write(s + " | @FridayOT\n")
+            hitfile.write(s + " | @FIRE_X_CHANNEL\n")
     await borg.send_file(
         event.chat_id,
         "hits.txt",
