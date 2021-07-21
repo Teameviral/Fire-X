@@ -85,3 +85,30 @@ async def tiny_pic_spam(e):
         return await e.reply(
             f"**Error**\nUsage `!mspam <count> reply to a sticker/gif/photo/video`"
         )
+
+
+CMD_HELP.update(
+
+    {
+
+        "Spam": "**SPAM**\
+
+\n\n**Syntax : **`.spam <number> <text>`\
+
+\n**Usage :** Sends the text 'X' number of times.\
+
+\n\n**Syntax : **`.mspam <reply to media> <number>`\
+
+\n**Usage :** Sends the replied media (gif/ video/ sticker/ pic) 'X' number of times.\
+
+\n\n**Syntax : **`.dspam <delay> <spam count> <text>`\
+
+\n**Usage :**  Sends the text 'X' number of times in 'Y' seconds of delay\
+
+\n\n**Syntax : **`.bigspam <delay> <spam count> <text>`\
+
+\n**Usage :** Sends the text 'X' number of times. This what firebot is known for. The Best BigSpam Ever."
+
+    }
+
+)
