@@ -34,7 +34,7 @@ def get_readable_time(seconds: int) -> str:
 
 
 # @command(pattern="^.latestupdate")
-@friday.on(friday_on_cmd(pattern="latestupdate"))
+@fire.on(fire_on_cmd(pattern="latestupdate"))
 async def _(event):
     if event.fwd_from:
         return
