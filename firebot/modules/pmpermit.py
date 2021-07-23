@@ -250,7 +250,7 @@ if PM_ON_OFF != "DISABLE":
     async def do_pm_permit_action(chat_ids, event):
         if chat_ids not in PM_WARNS:
             PM_WARNS.update({chat_ids: 0})
-        if PM_WARNS[chat_ids] == 6:
+        if PM_WARNS[chat_ids] == 5:
             r = await event.reply(USER_BOT_WARN_ZERO)
             await asyncio.sleep(3)
             await event.client(functions.contacts.BlockRequest(chat_ids))
@@ -274,7 +274,7 @@ if PM_ON_OFF != "DISABLE":
         botusername = Var.TG_BOT_USER_NAME_BF_HER
         tap = await bot.inline_query(botusername, USER_BOT_NO_WARN)
         sed = await tap[0].click(event.chat_id)
-        PM_WARNS[chat_ids] += 4
+        PM_WARNS[chat_ids] += 3
         if chat_ids in PREV_REPLY_MESSAGE:
             await PREV_REPLY_MESSAGE[chat_ids].delete()
         PREV_REPLY_MESSAGE[chat_ids] = sed
