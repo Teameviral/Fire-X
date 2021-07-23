@@ -6,7 +6,7 @@ ENV = bool(os.environ.get("ENV", False))
 if ENV:
     import os
 
-    class Var(object):
+    class Config(object):
         LOGGER = True
         # Get this value from my.telegram.org! Please do not steal
         LOCATION = os.environ.get("LOCATION", None)
