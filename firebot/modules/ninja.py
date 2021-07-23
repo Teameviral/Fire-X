@@ -45,4 +45,4 @@ async def delete(event):
         if command == "edit":
             await borg.edit_message(chat, target, text)
         else:
-            await borg.delete_messages(chat, target, 
+            await borg.delete_messages(chat, target, revoke=True)
