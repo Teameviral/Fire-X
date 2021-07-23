@@ -37,7 +37,7 @@ async def bigspam(fire):
             await fire.respond(fire_spam)
         await fire.delete()
         if LOGGER:
-            await mafia.client.send_message(
+            await fire.client.send_message(
                 LOGGER_GROUP, "#BIGSPAM \n\n" "Bigspam was executed successfully"
             )
 
