@@ -7,7 +7,7 @@ from telegraph import Telegraph
 
 from firebot import CMD_HELP
 from firebot.Configs import Config
-from fire.utils import fire_on_cmd
+from firebot.utils import fire_on_cmd
 
 telegraph = Telegraph()
 tgnoob = telegraph.create_account(short_name="Friday 🇮🇳")
