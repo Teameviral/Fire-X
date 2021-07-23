@@ -8,7 +8,7 @@ from firebot.var import Var
 from firebot.utils import fire_on_cmd, edit_or_reply, sudo_cmd
 
 
-@borg.on(fire_cmd(pattern="ytmusic ?(.*)"))
+@borg.on(fire_on_cmd(pattern="ytmusic ?(.*)"))
 @borg.on(sudo_cmd(pattern="ytmusic ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
