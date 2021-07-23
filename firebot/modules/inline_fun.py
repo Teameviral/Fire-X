@@ -1,4 +1,4 @@
-from var import Var
+from firebot.var import Var
 from firebot import CMD_HELP
 from firebot.utils import fire_on_cmd
 
