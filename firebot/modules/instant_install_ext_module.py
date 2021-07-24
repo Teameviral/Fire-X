@@ -3,7 +3,7 @@ from pathlib import Path
 
 from telethon.tl.types import InputMessagesFilterDocument
 
-from firebot.var import Var
+from var import Var
 from firebot.utils import command, load_module
 
 
