@@ -5,7 +5,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import scoped_session, sessionmaker
 
 # the secret configuration specific things
-from firebot.var import Var
+from var import Var
 
 
 def start() -> scoped_session:
