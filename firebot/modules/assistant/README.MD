@@ -9,7 +9,7 @@ async def shit(event):
     await event.reply(f"My master is [Pro](tg://user?id={bot.uid}")
 ```
 ### If Your Command Has Args Then Set It To `is_args=True` Else Set It To `is_args=False`.
-### Some Wrappers To Help You ! 
+### Some Wrappers To Help You !! 
 ```
 [+] - @is_admin ~ This Checks If Sender Is Admin.
 [+] - @god_only ~ This Makes Sure Only God (owner) Only Uses it.
