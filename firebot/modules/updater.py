@@ -149,6 +149,6 @@ async def deploy_start(tgbot, message, refspec, remote):
     await message.edit(
         "**UpdatinG Your ubot sir!!!\nPlease WaiT FoR 5-10 mins, modules are loading after that type `.alive` to check if I am On**🤗😅"
     )
-    await remote.push(refspec=refspec)
+    remote.push(refspec=refspec)
     await tgbot.disconnect()
     os.execl(sys.executable, sys.executable, *sys.argv)
