@@ -6,7 +6,7 @@ from pathlib import Path
 
 from telethon import events
 
-from firebot.var import Var
+from var import Var
 from firebot import CMD_LIST, LOAD_PLUG, SUDO_LIST, bot
 from firebot.Configs import Config
 from firebot.wraptools import (
