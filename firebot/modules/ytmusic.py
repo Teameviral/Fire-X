@@ -4,7 +4,7 @@ import os
 import wget
 from youtubesearchpython import SearchVideos
 
-from firebot.var import Var
+from var import Var
 from firebot.utils import fire_on_cmd, edit_or_reply, sudo_cmd
 
 
