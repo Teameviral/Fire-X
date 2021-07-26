@@ -4,14 +4,14 @@
   "logo": "https://telegra.ph/file/8dfa5e4e768a586b1005d.jpg",
   "keywords": [
     "telegram",
-    "virtualuserbot",
+    "fire-x",
     "plugin",
-    "telegram-virtualuserbot",
+    "telegram-firebot",
     "productivity"
   ],
   "repository": "https://github.com/Chrisdroid1/Fire-X",
-  "website": "starkgang.ml",
-  "success_url": "t.me/FridayOT",
+  "website": "t.me/FIRE_X_CHANNEL",
+  "success_url": "t.me/FIRE_X_CHANNEL",
   "stack": "container",
   "env": {
     "ENV": {
@@ -20,7 +20,7 @@
     },
     "TEMP_DOWNLOAD_DIRECTORY": {
       "description": "Where downloaded files will go.",
-      "value": "./virtualuserbot/DOWNLOADS/",
+      "value": "./firebot/DOWNLOADS/",
       "required": false
     },
     "ALIVE_NAME": {
@@ -28,7 +28,7 @@
       "value": ""
     },
     "lang": {
-      "description": "Enter the Userbot's language ( si , en ) <= Simple letters are copulsory.. only support si and en ",
+      "description": "Leave as en Don’t change ",
       "value": "en"
     },    
     "APP_ID": {
@@ -66,7 +66,7 @@
       "required": false
     },
     "GIT_REPO_NAME": {
-      "description": "Your repo name Example: Midhunkm1294/FridayUserbot, but GITHUB_ACCESS_TOKEN must be setup first.",
+      "description": "Your repo name Example: chrisdroid1/firebot, but GITHUB_ACCESS_TOKEN must be setup first.",
       "value": "",
       "required": false
     },
@@ -108,12 +108,12 @@
     },
      "ALIVE_IMAGE": {
       "description": "Enter Image URL for bot pic ",
-      "value": "https://telegra.ph/file/4e1364fb18f899ad47dec.png",
+      "value": "",
       "required": false
     },
      "PMPERMIT_PIC": {
       "description": "Enter Image URL for bot's pmsecurity pic ",
-      "value": "https://telegra.ph/file/4e1364fb18f899ad47dec.png",
+      "value": "",
       "required": false
     },    
     
