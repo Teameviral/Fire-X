@@ -1,15 +1,15 @@
 <p align="center">
    
-   <a href="https://github.com/Chrisdroid1/firebot">
+   <a href="https://github.com/Chrisdroid1/Fire-X">
       <img src="https://telegra.ph/file/4fd8dcd5319be4e025022.jpg" alt="firex", height="300px",width="300px">
    </a>
    <br>
-   <b>firebot UserBot</b><br>
+   <b>Fire-X UserBot</b><br>
    <i>The Awaited Bot</i>
 </p>
  
    
-# [firebot](https://t.me/FireXUserBot) userbot
+# [Fire-X](https://t.me/FireXUserBot) userbot
 
 The Most Powerful Telegram Userbot.
 This Userbot is Safe to use in Your Telegram Account.
@@ -18,9 +18,9 @@ It is not like the other bots which are being Suspended by Heroku. Hence, it can
 
 ## ᑈֆօƈɨǟʟ ՏԵɑԵմՏ օƒ ɮօԵ ᐵ 
 
-<p align="left"><a href="https://github.com/Chrisdroid1/firebot/network/members"><img src="https://img.shields.io/github/forks/Chrisdroid1/firebot?label=Forks&logoColor=purple&style=social"></a><p align="left"><a href="https://github.com/Chrisdroid1/firebot/stargazers"><img src="https://img.shields.io/github/stars/Chrisdroid1/firebot?logoColor=red&style=social"></a><p align="left"><a href="https://github.com/Chrisdroid1/firebot"><img src="https://img.shields.io/github/last-commit/Chrisdroid1/firebot?logoColor=brown&style=plastic"></a>
+<p align="left"><a href="https://github.com/Chrisdroid1/Fire-X/network/members"><img src="https://img.shields.io/github/forks/Chrisdroid1/Fire-X?label=Forks&logoColor=purple&style=social"></a><p align="left"><a href="https://github.com/Chrisdroid1/Fire-X/stargazers"><img src="https://img.shields.io/github/stars/Chrisdroid1/Fire-X?logoColor=red&style=social"></a><p align="left"><a href="https://github.com/Chrisdroid1/Fire-X"><img src="https://img.shields.io/github/last-commit/Chrisdroid1/Fire-X?logoColor=brown&style=plastic"></a>
 
-# How to Deploy firebot Userbot?
+# How to Deploy Fire-X Userbot?
 Tutorial Coming soon
    
 ##### Deploy
