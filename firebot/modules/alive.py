@@ -1,8 +1,8 @@
 import asyncio
 import random
 from telethon import events, version
-from userbot import ALIVE_NAME, currentversion
-from userbot.utils import admin_cmd, sudo_cmd
+from firebot import ALIVE_NAME, currentversion
+from firebot.utils import admin_cmd, sudo_cmd
 from telethon.tl.types import ChannelParticipantsAdmins
 from firebot import CMD_HELP
 
