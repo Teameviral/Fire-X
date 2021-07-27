@@ -108,16 +108,12 @@
     },
      "ALIVE_IMAGE": {
       "description": "Enter Image URL for bot pic ",
-      "value": "",
-      "required": false
+      "value": ""
     },
      "PMPERMIT_PIC": {
       "description": "Enter Image URL for bot's pmsecurity pic ",
-      "value": "",
-      "required": false
+      "value": ""
     },    
-    
-    
     "TZ": {
       "description": "Required for Correct Time on autopic",
       "value": "Asia/Colombo",
