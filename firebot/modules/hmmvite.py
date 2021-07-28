@@ -129,10 +129,3 @@ async def _(event):
                     await event.reply(str(e))
             await edit_or_reply(event, "kidnapped user to the chat....")
             
-            CMD_HELP.update(
-     {
-         "kidnapp": "**kidnappall**\
- \n\n**Syntax : **`.kidnappall`\
- \n**Usage :** Scrape or kidnap members from a group to another group."
-     }
- )
