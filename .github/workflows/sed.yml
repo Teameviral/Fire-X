@@ -8,7 +8,7 @@ jobs:
       - name: Find and Replace
         uses: jacobtomlinson/gha-find-replace@master
         with:
-          find: "chrisdroid1/Fire-X"
+          find: "Chrisdroid1/Fire-X"
           replace: "FireXbot/Fire-X"
       - name: Pull All Updates
         uses: stefanzweifel/git-auto-commit-action@v4
