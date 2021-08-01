@@ -46,7 +46,7 @@ FROM
 
 ## HOST YOUR FIRE-X on VPS✳️ 
 ```
-$ git clone `https://github.com/chrisdroid1/Fire-X`
+$ git clone `https://github.com/FireXbot/Fire-X`
 $ cd fire bot 
 #install requirements
 

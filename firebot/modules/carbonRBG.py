@@ -109,7 +109,7 @@ async def carbon_api(e):
         await e.client.send_file(
             e.chat_id,
             file,
-            caption="Carbonised by [Fire-X](https://github.com/chrisdroid1/Fire-X)",
+            caption="Carbonised by [Fire-X](https://github.com/FireXbot/Fire-X)",
             force_document=False,
             reply_to=e.message.reply_to_msg_id,
         )
