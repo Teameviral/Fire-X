@@ -1,6 +1,6 @@
 <p align="center">
    
-   <a href="https://github.com/Chrisdroid1/Fire-X">
+   <a href="https://github.com/FireXbot/Fire-X">
       <img src="https://telegra.ph/file/4fd8dcd5319be4e025022.jpg" alt="firex", height="300px",width="300px">
    </a>
    <br>
@@ -18,7 +18,7 @@ It is not like the other bots which are being Suspended by Heroku. Hence, it can
 
 ## ᑈֆօƈɨǟʟ ՏԵɑԵմՏ օƒ ɮօԵ ᐵ 
 
-<p align="left"><a href="https://github.com/Chrisdroid1/Fire-X/network/members"><img src="https://img.shields.io/github/forks/Chrisdroid1/Fire-X?label=Forks&logoColor=purple&style=social"></a><p align="left"><a href="https://github.com/Chrisdroid1/Fire-X/stargazers"><img src="https://img.shields.io/github/stars/Chrisdroid1/Fire-X?logoColor=red&style=social"></a><p align="left"><a href="https://github.com/Chrisdroid1/Fire-X"><img src="https://img.shields.io/github/last-commit/Chrisdroid1/Fire-X?logoColor=brown&style=plastic"></a>
+<p align="left"><a href="https://github.com/FireXbot/Fire-X/network/members"><img src="https://img.shields.io/github/forks/FireXbot/Fire-X?label=Forks&logoColor=purple&style=social"></a><p align="left"><a href="https://github.com/FireXbot/Fire-X/stargazers"><img src="https://img.shields.io/github/stars/FireXbot/Fire-X?logoColor=red&style=social"></a><p align="left"><a href="https://github.com/FireXbot/Fire-X"><img src="https://img.shields.io/github/last-commit/FireXbot/Fire-X?logoColor=brown&style=plastic"></a>
 
 # How to Deploy Fire-X Userbot?
 Tutorial Coming soon

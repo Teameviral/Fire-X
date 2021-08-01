@@ -43,7 +43,7 @@ if lang == "si":
         elif event.query.user_id == bot.uid and query == "stats":
             result = builder.article(
                 title="Stats",
-                text=f"**Showing Stats For {DEFAULTUSER}'s Fire-XBot** \nNote --> Only Owner Can Check This \n(C) [Fire-X](https://github.com/Chrisdroid1/Fire-X)",
+                text=f"**Showing Stats For {DEFAULTUSER}'s Fire-XBot** \nNote --> Only Owner Can Check This \n(C) [Fire-X](https://github.com/FireXbot/Fire-X)",
                 buttons=[
                     [custom.Button.inline("Show Stats ?", data="terminator")],
                     [Button.url("Developed By", "https://github.com/Chrisdroid1")],
@@ -319,7 +319,7 @@ else:
                     [custom.Button.inline("Show Stats ?", data="terminator")],
                     [
                         Button.url(
-                            "Repo Here", "https://github.com/Chrisdroid1/Fire-X"
+                            "Repo Here", "https://github.com/FireXbot/Fire-X"
                         )
                     ],
                     [Button.url("Join Channel ❤️", "t.me/https://t.me/Fire_X_CHANNEL")],
@@ -575,7 +575,7 @@ async def inline_id_handler(event: events.InlineQuery.Event):
     if event.query.user_id != bot.uid:
         resultm = builder.article(
             title="Not Allowded",
-            text=f"You Can't Use This Bot. \nDeploy Fire-X To Get Your Own Assistant, Repo Link [Here](https://github.com/Chrisdroid1/Fire-X)",
+            text=f"You Can't Use This Bot. \nDeploy Fire-X To Get Your Own Assistant, Repo Link [Here](https://github.com/FireXbot/Fire-X)",
         )
         await event.answer([resultm])
         return
@@ -656,7 +656,7 @@ async def inline_id_handler(event: events.InlineQuery.Event):
     if event.query.user_id != bot.uid:
         resultm = builder.article(
             title="Not Allowded",
-            text=f"You Can't Use This Bot. \nDeploy Fire-X To Get Your Own Assistant, Repo Link [Here](https://github.com/Chrisdroid1/Fire-X)",
+            text=f"You Can't Use This Bot. \nDeploy Fire-X To Get Your Own Assistant, Repo Link [Here](https://github.com/FireXbot/Fire-X)",
         )
         await event.answer([resultm])
         return
@@ -710,7 +710,7 @@ async def inline_id_handler(event: events.InlineQuery.Event):
     if event.query.user_id != bot.uid:
         resultm = builder.article(
             title="Not Allowded",
-            text=f"You Can't Use This Bot. \nDeploy Fire-X To Get Your Own Assistant, Repo Link [Here](https://github.com/Chrisdroid1/Fire-X)",
+            text=f"You Can't Use This Bot. \nDeploy Fire-X To Get Your Own Assistant, Repo Link [Here](https://github.com/FireXbot/Fire-X)",
         )
         await event.answer([resultm])
         return
@@ -754,7 +754,7 @@ async def inline_id_handler(event: events.InlineQuery.Event):
     if event.query.user_id != bot.uid:
         resultm = builder.article(
             title="- Not Allowded -",
-            text=f"You Can't Use This Bot. \nDeploy Fire-X  To Get Your Own Assistant, Repo Link [Here](https://github.com/Chrisdroid1/Fire-X)",
+            text=f"You Can't Use This Bot. \nDeploy Fire-X  To Get Your Own Assistant, Repo Link [Here](https://github.com/FireXbot/Fire-X)",
         )
         await event.answer([resultm])
         return
@@ -800,7 +800,7 @@ async def inline_id_handler(event: events.InlineQuery.Event):
     if event.query.user_id != bot.uid:
         resultm = builder.article(
             title="- Not Allowded -",
-            text=f"You Can't Use This Bot. \nDeploy Fire-X To Get Your Own Assistant, Repo Link [Here](https://github.com/Chrisdroid1/Fire-X)",
+            text=f"You Can't Use This Bot. \nDeploy Fire-X To Get Your Own Assistant, Repo Link [Here](https://github.com/FireXbot/Fire-X)",
         )
         await event.answer([resultm])
         return
@@ -834,7 +834,7 @@ async def inline_id_handler(event: events.InlineQuery.Event):
     if event.query.user_id != bot.uid:
         resultm = builder.article(
             title="- Not Allowded -",
-            text=f"You Can't Use This Bot. \nDeploy Fire-X To Get Your Own Assistant, Repo Link [Here](https://github.com/Chrisdroid1/Fire-X)",
+            text=f"You Can't Use This Bot. \nDeploy Fire-X To Get Your Own Assistant, Repo Link [Here](https://github.com/FireXbot/Fire-X)",
         )
         await event.answer([resultm])
         return
@@ -887,7 +887,7 @@ async def inline_id_handler(event):
     if event.query.user_id != bot.uid:
         resultm = builder.article(
             title="- Not Allowded -",
-            text=f"You Can't Use This Bot. \nDeploy Fire-X To Get Your Own Assistant, Repo Link [Here](https://github.com/Chrisdroid1/Fire-X)",
+            text=f"You Can't Use This Bot. \nDeploy Fire-X To Get Your Own Assistant, Repo Link [Here](https://github.com/FireXbot/Fire-X)",
         )
         await event.answer([resultm])
         return

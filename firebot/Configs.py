@@ -162,7 +162,7 @@ if ENV:
         GPLINKS_API_KEY = os.environ.get("GPLINKS_API_KEY", None)
         OPEN_LOAD_KEY = os.environ.get("OPEN_LOAD_KEY", None)
         UPSTREAM_REPO = os.environ.get(
-            "UPSTREAM_REPO", "https://github.com/Chrisdroid1/Fire-X"
+            "UPSTREAM_REPO", "https://github.com/FireXbot/Fire-X"
         )
         ALIVE_IMAGE = os.environ.get("ALIVE_IMAGE", None)
         ASSISTANT_START_PIC = os.environ.get(
