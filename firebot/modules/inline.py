@@ -46,7 +46,7 @@ if lang == "si":
                 text=f"**Showing Stats For {DEFAULTUSER}'s Fire-XBot** \nNote --> Only Owner Can Check This \n(C) [Fire-X](https://github.com/FireXbot/Fire-X)",
                 buttons=[
                     [custom.Button.inline("Show Stats ?", data="terminator")],
-                    [Button.url("Developed By", "https://github.com/Chrisdroid1")],
+                    [Button.url("Developed By", "https://github.com/FireXbot")],
                     [Button.url("Support Chat❤️", "t.me/FireXUserBot")],
                 ],
             )
