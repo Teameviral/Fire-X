@@ -70,18 +70,6 @@ STRING_SESSION [+] - STRING SESSION
 
 <a href="https://telegram.me/FIREXuserbot" target="_blank"><img src="https://img.shields.io/badge/Join-Support%20Group-red.svg?style=for-the-badge&logo=Telegram"></a>
 
-# 𝙳𝙴𝚅𝙴𝙻𝙿𝙾𝙴𝚁𝚂
-
-### ACCOUNTS
-
-##### FireXbot ︎☻︎
-
-TELEGRAM ☞︎︎︎ <a href="https://t.me/Mrkahno"> <img src="https://img.shields.io/badge/Mrkahno-leaderdev-black?style=social&logo=telegram" alt="DEVELOPER" /></a>  
-
-
-GITHUB ➛ <a href="https://github.com/FireXbot" alt="FireXbot"><img src="https://img.shields.io/badge/github-FireXbot-black?logo=github" 
-
-
 
 #####  Credits 🌹
 
