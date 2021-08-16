@@ -44,7 +44,7 @@ async def _(event):
             await borg.send_file(
                 event.chat_id,
                 directory_name + ".zip",
-                caption="Zipped By [𝔅𝔩𝔞𝔠𝔨 𝔏𝔦𝔤𝔥𝔱𝔫𝔦𝔫𝔤](https://github.com/Anmol-dot283/Black-Lightning)",
+                caption="Zipped By [Fire-X](https://github.com/TeamEviral/Fire-X)",
                 force_document=True,
                 allow_cache=False,
                 reply_to=event.message.id,
