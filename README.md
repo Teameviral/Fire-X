@@ -25,7 +25,8 @@ Tutorial Coming soon
    
 ##### Deploy
 <a href="https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FTeamEviral%2Ffire-X&amp;template=https%3A%2F%2Fgithub.com%2FTeamEviral%2Ffire-X" rel="nofollow" style="background-color: initial; box-sizing: border-box; color: #0366d6; text-decoration-line: none;"><img alt="Deploy To Heroku" src="https://camo.githubusercontent.com/83b0e95b38892b49184e07ad572c94c8038323fb/68747470733a2f2f7777772e6865726f6b7563646e2e636f6d2f6465706c6f792f627574746f6e2e737667" style="border-style: none; box-sizing: initial; max-width: 100%;" /></a></div>
-     
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template?template=https%3A%2F%2Fgithub.com%2FTeamEviral%2FFire-X&envs=APP_ID%2CAPI_HASH%2CSTRING_SESSION%2CPRIVATE_GROUP_ID%2CTG_BOT_TOKEN_BF_HER%2CTG_BOT_USER_NAME_BF_HER&APP_IDDesc=Get+this+value+from+my.telegram.org%21+Please+do+not+steal&API_HASHDesc=Get+this+value+from+my.telegram.org%21+Please+do+not+steal&STRING_SESSIONDesc=Get+this+value+by+running+python3+telesetup.py+locally+or+https%3A%2F%2Freplit.com%2F%40Chrisdroid1%2FFire-X-String-Gen%23main.py+online.&PRIVATE_GROUP_IDDesc=This+is+all+in+one+group+id.+just+add+%40Missrose_bot+to+your+private+group+and+do+%2Fid&TG_BOT_TOKEN_BF_HERDesc=Needed+for+inline+buttons+maker.+Make+a+bot+at+http%3A%2F%2Ftelegram.dog%2FBotFather+and+get+the+token+of+your+bot.+Get+it+else+.help+won%27t+work.&TG_BOT_USER_NAME_BF_HERDesc=Needed+for+inline+buttons+maker.+Make+a+bot+at+http%3A%2F%2Ftelegram.dog%2FBotFather+and+get+the+username+of+your+bot.+Get+it+else+.help+won%27t+work)
+    
      
 
 
