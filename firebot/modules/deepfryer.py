@@ -30,13 +30,14 @@ async def deepfryer(event):
         await event.edit("`Reply to an image or sticker to deep fry it!`")
         return
     image = Image.open(image_s)
-    await event.edit("`Now, Deep frying media…`")
+    omkk = await event.edit("`Now, Deep frying media…`")
     for _ in range(frycount):
         image = await deepfry(image)
     image.save("./chrisgang/fried.png")
     file_name = "fried.png"
     ok = "./chrisgang/" + file_name
     await event.reply(file=ok)
+    await omkk.delete()
     os.remove(ok)
 
 
