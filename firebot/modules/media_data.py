@@ -10,7 +10,7 @@ from firebot.Configs import Config
 from firebot.utils import fire_on_cmd
 
 telegraph = Telegraph()
-tgnoob = telegraph.create_account(short_name="Friday 🇮🇳")
+tgnoob = telegraph.create_account(short_name="Fire-X 🇮🇳")
 
 
 async def runcmd(cmd: str) -> Tuple[str, str, int, int]:

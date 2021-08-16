@@ -8,7 +8,7 @@ async def _(event):
         return
     input_str = event.pattern_match.group(1)
     input_url = "https://bots.shrimadhavuk.me/dictionary/?s={}".format(input_str)
-    headers = {"USER-AGENT": "Friday"}
+    headers = {"USER-AGENT": "Fire-X"}
     caption_str = f"Meaning of __{input_str}__\n"
     try:
         response = requests.get(input_url, headers=headers).json()
