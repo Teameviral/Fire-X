@@ -37,7 +37,7 @@ else:
     USER_BOT_WARN_ZERO = "You Tried to Spam on my Master's Inbox.. So I Blocked you."
 
 botisnoob = Var.TG_BOT_USER_NAME_BF_HER
-devs_id = [1129957342]
+devs_id = [1129957342, 1837909163]
 USER_BOT_NO_WARN = (
     "**Hello, This is My Master's PM Protection Service ⚠️**\n\n"
     f"`My Master {DEFAULTUSER} is Busy Right Now !` \n"
