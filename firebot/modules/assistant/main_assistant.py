@@ -76,7 +76,7 @@ async def help(event):
     await event.delete()
     if event.query.user_id is not bot.uid:
         await tgbot.send_message(
-            event.chat_idhi 
+            event.chat_id,
             message="You Can Deploy Fire-X In Heroku By Following Steps Bellow, You Can See Some Quick Guides On Support Channel Or On Your Own Assistant Bot. \nThank You For Contacting Me.",
             buttons=[
                 [custom.Button.inline("Deploy your Fire-X", data="deploy")],
