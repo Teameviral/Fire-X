@@ -164,7 +164,7 @@ if ENV:
         UPSTREAM_REPO = os.environ.get(
             "UPSTREAM_REPO", "https://github.com/TeamEviral/Fire-X"
         )
-        ALIVE_IMAGE = os.environ.get("ALIVE_IMAGE", None)
+        ALIVE_IMAGE = os.environ.get("ALIVE_IMAGE", "https://telegra.ph/file/4fd8dcd5319be4e025022.jpg")
         ASSISTANT_START_PIC = os.environ.get(
             "ASSISTANT_START_PIC",
             "https://telegra.ph/file/c1847e49157e1502f8501.jpg",
