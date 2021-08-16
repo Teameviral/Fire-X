@@ -86,5 +86,5 @@ Userbots Made possible. Credits
 - [TeleBot](https://github.com/xditya/Telebot)-
 Speed Boosted by the help of this source code.. Credits
 
-- [Black Lightning](https://github.com/Keinshij/Black-lightning)- 
+- [Black Lightning](https://github.com/Keinshin/Black-lightning)- 
 Got Fun tools from this.. Respect
