@@ -4,7 +4,7 @@ from firebot import ALIVE_NAME, CMD_HELP
 
 from ..utils import admin_cmd, sudo_cmd
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Fire-X"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "firexuserbot"
 
 
 @bot.on(admin_cmd(pattern="imp(|n) (.*)", outgoing=True))

@@ -19,7 +19,7 @@ async def _(event):
         await event.client.send_file(
             event.chat_id,
             "seo.html",
-            caption=f"**Site SEO Analysed Successfully\n\nNote: Open This File With Chrome Or Any Browser\n\n\nSite Analysed By Fire-X\nGet Your superpowers With** [Fire-X](github.com/inukaasith/virtualuserbot)",
+            caption=f"**Site SEO Analysed Successfully\n\nNote: Open This File With Chrome Or Any Browser\n\n\nSite Analysed By firexuserbot\nGet Your superpowers With** [firexuserbot](github.com/inukaasith/virtualuserbot)",
         )
         com = "rm seo.html"
         os.system(com)

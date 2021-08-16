@@ -21,7 +21,7 @@ if PMPERMIT_PIC is None:
 else:
     WARN_PIC = PMPERMIT_PIC
 LOG_CHAT = Config.PRIVATE_GROUP_ID
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Fire-X"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "firexuserbot"
 
 if lang == "si":
 
@@ -30,7 +30,7 @@ if lang == "si":
         builder = event.builder
         result = None
         query = event.text
-        if event.query.user_id == bot.uid and query.startswith("Fire-X"):
+        if event.query.user_id == bot.uid and query.startswith("firexuserbot"):
             rev_text = query[::-1]
             buttons = paginate_help(0, CMD_HELP, "helpme")
             result = builder.article(
@@ -43,7 +43,7 @@ if lang == "si":
         elif event.query.user_id == bot.uid and query == "stats":
             result = builder.article(
                 title="Stats",
-                text=f"**Showing Stats For {DEFAULTUSER}'s Fire-XBot** \nNote --> Only Owner Can Check This \n(C) [Fire-X](https://github.com/FireXbot/Fire-X)",
+                text=f"**Showing Stats For {DEFAULTUSER}'s firexuserbotBot** \nNote --> Only Owner Can Check This \n(C) [firexuserbot](https://github.com/FireXbot/firexuserbot)",
                 buttons=[
                     [custom.Button.inline("Show Stats ?", data="terminator")],
                     [Button.url("Developed By", "https://github.com/TeamEviral")],
@@ -116,7 +116,7 @@ if lang == "si":
                 f"**🦹‍♀️ PLUGIN NAME 🦹‍♀️ :** `{plugin_name}` \n{CMD_HELP[plugin_name]}"
             )
         reply_pop_up_alert = help_string
-        reply_pop_up_alert += "\n\n**(C) Fire-X ** ".format(plugin_name)
+        reply_pop_up_alert += "\n\n**(C) firexuserbot ** ".format(plugin_name)
         if len(reply_pop_up_alert) >= 4096:
             crackexy = "`Pasting Your Help Menu.`"
             await event.answer(crackexy, cache_time=0, alert=True)
@@ -149,7 +149,7 @@ if lang == "si":
         yt_dl_data = event.data_match.group(1).decode("UTF-8")
         link_s = yt_dl_data
         if event.query.user_id != bot.uid:
-            text = f"Please Get Your Own Fire-X And Don't Waste My Resources"
+            text = f"Please Get Your Own firexuserbot And Don't Waste My Resources"
             await event.answer(text, alert=True)
             return
         is_it = True
@@ -170,7 +170,7 @@ if lang == "si":
         yt_dl_data = event.data_match.group(1).decode("UTF-8")
         link_s = yt_dl_data
         if event.query.user_id != bot.uid:
-            text = f"Please Get Your Own Fire-X And Don't Waste My Resources"
+            text = f"Please Get Your Own firexuserbot And Don't Waste My Resources"
             await event.answer(text, alert=True)
             return
         is_it = False
@@ -180,7 +180,7 @@ if lang == "si":
     async def rip(event):
         link_s = event.pattern_match.group(1)
         if event.query.user_id != bot.uid:
-            text = f"Please Get Your Own Fire-X And Don't Waste My Resources."
+            text = f"Please Get Your Own firexuserbot And Don't Waste My Resources."
             await event.answer(text, alert=True)
             return
         await _phdl(link_s, event, tgbot)
@@ -211,7 +211,7 @@ if lang == "si":
         await event.answer("Back", cache_time=0, alert=False)
         # This Is Copy of Above Code. (C) @SpEcHiDe
         buttons = paginate_help(0, CMD_HELP, "helpme")
-        sed = f"""Fire-X Modules Are Listed Here !\n
+        sed = f"""firexuserbot Modules Are Listed Here !\n
     For More Help or Support contact {DEFAULTUSER} \nCurrently Loaded Plugins: {len(CMD_LIST)}\nCurrently using Language - Sinhala (Sinhalese)"""
         await event.edit(message=sed, buttons=buttons)
 
@@ -301,7 +301,7 @@ else:
         builder = event.builder
         result = None
         query = event.text
-        if event.query.user_id == bot.uid and query.startswith("Fire-X"):
+        if event.query.user_id == bot.uid and query.startswith("firexuserbot"):
             rev_text = query[::-1]
             buttons = paginate_help(0, CMD_HELP, "helpme")
             result = builder.article(
@@ -314,12 +314,12 @@ else:
         elif event.query.user_id == bot.uid and query == "stats":
             result = builder.article(
                 title="Stats",
-                text=f"**Showing Stats For {DEFAULTUSER}'s Fire-X** \nNote --> Only Owner Can Check This \n(C) Fire-X",
+                text=f"**Showing Stats For {DEFAULTUSER}'s firexuserbot** \nNote --> Only Owner Can Check This \n(C) firexuserbot",
                 buttons=[
                     [custom.Button.inline("Show Stats ?", data="terminator")],
                     [
                         Button.url(
-                            "Repo Here", "https://github.com/TeamEviral/Fire-X"
+                            "Repo Here", "https://github.com/TeamEviral/firexuserbot"
                         )
                     ],
                     [Button.url("Join Channel ❤️", "t.me/https://t.me/Fire_X_CHANNEL")],
@@ -382,7 +382,7 @@ else:
     )
     async def on_plug_in_callback_query_handler(event):
         if not event.query.user_id == bot.uid:
-            sedok = "Who The Fuck Are You? Get Your Own Fire-X ."
+            sedok = "Who The Fuck Are You? Get Your Own firexuserbot ."
             await event.answer(sedok, cache_time=0, alert=True)
             return
         plugin_name = event.data_match.group(1).decode("UTF-8")
@@ -424,7 +424,7 @@ else:
         yt_dl_data = event.data_match.group(1).decode("UTF-8")
         link_s = yt_dl_data
         if event.query.user_id != bot.uid:
-            text = f"Please Get Your Own Fire-X And Don't Waste My Resources"
+            text = f"Please Get Your Own firexuserbot And Don't Waste My Resources"
             await event.answer(text, alert=True)
             return
         is_it = True
@@ -435,7 +435,7 @@ else:
         sun = event.data_match.group(1).decode("UTF-8")
 
         if event.query.user_id != bot.uid:
-            text = f"Please Get Your Own Fire-X And Don't Waste My Resources"
+            text = f"Please Get Your Own firexuserbot And Don't Waste My Resources"
             await event.answer(text, alert=True)
             return
         await _deezer_dl(sun, event, tgbot)
@@ -445,7 +445,7 @@ else:
         yt_dl_data = event.data_match.group(1).decode("UTF-8")
         link_s = yt_dl_data
         if event.query.user_id != bot.uid:
-            text = f"Please Get Your Own Fire-X And Don't Waste My Resources"
+            text = f"Please Get Your Own firexuserbot And Don't Waste My Resources"
             await event.answer(text, alert=True)
             return
         is_it = False
@@ -455,7 +455,7 @@ else:
     async def rip(event):
         link_s = event.pattern_match.group(1)
         if event.query.user_id != bot.uid:
-            text = f"Please Get Your Own Fire-X And Don't Waste My Resources."
+            text = f"Please Get Your Own firexuserbot And Don't Waste My Resources."
             await event.answer(text, alert=True)
             return
         await _phdl(link_s, event, tgbot)
@@ -486,7 +486,7 @@ else:
         await event.answer("Back", cache_time=0, alert=False)
         # This Is Copy of Above Code. (C) @SpEcHiDe
         buttons = paginate_help(0, CMD_HELP, "helpme")
-        sed = f"""Fire-X Userbot Modules Are Listed Here !\n
+        sed = f"""firexuserbot Userbot Modules Are Listed Here !\n
     For More Help or Support contact {DEFAULTUSER} \nCurrently Loaded Plugins: {len(CMD_LIST)}\nCurrently using Language - English (Standard)"""
         await event.edit(message=sed, buttons=buttons)
 
@@ -575,7 +575,7 @@ async def inline_id_handler(event: events.InlineQuery.Event):
     if event.query.user_id != bot.uid:
         resultm = builder.article(
             title="Not Allowded",
-            text=f"You Can't Use This Bot. \nDeploy Fire-X To Get Your Own Assistant, Repo Link [Here](https://github.com/TeamEviral/Fire-X)",
+            text=f"You Can't Use This Bot. \nDeploy firexuserbot To Get Your Own Assistant, Repo Link [Here](https://github.com/TeamEviral/firexuserbot)",
         )
         await event.answer([resultm])
         return
@@ -656,7 +656,7 @@ async def inline_id_handler(event: events.InlineQuery.Event):
     if event.query.user_id != bot.uid:
         resultm = builder.article(
             title="Not Allowded",
-            text=f"You Can't Use This Bot. \nDeploy Fire-X To Get Your Own Assistant, Repo Link [Here](https://github.com/TeamEviral/Fire-X)",
+            text=f"You Can't Use This Bot. \nDeploy firexuserbot To Get Your Own Assistant, Repo Link [Here](https://github.com/TeamEviral/firexuserbot)",
         )
         await event.answer([resultm])
         return
@@ -710,7 +710,7 @@ async def inline_id_handler(event: events.InlineQuery.Event):
     if event.query.user_id != bot.uid:
         resultm = builder.article(
             title="Not Allowded",
-            text=f"You Can't Use This Bot. \nDeploy Fire-X To Get Your Own Assistant, Repo Link [Here](https://github.com/TeamEviral/Fire-X)",
+            text=f"You Can't Use This Bot. \nDeploy firexuserbot To Get Your Own Assistant, Repo Link [Here](https://github.com/TeamEviral/firexuserbot)",
         )
         await event.answer([resultm])
         return
@@ -754,7 +754,7 @@ async def inline_id_handler(event: events.InlineQuery.Event):
     if event.query.user_id != bot.uid:
         resultm = builder.article(
             title="- Not Allowded -",
-            text=f"You Can't Use This Bot. \nDeploy Fire-X  To Get Your Own Assistant, Repo Link [Here](https://github.com/TeamEviral/Fire-X)",
+            text=f"You Can't Use This Bot. \nDeploy firexuserbot  To Get Your Own Assistant, Repo Link [Here](https://github.com/TeamEviral/firexuserbot)",
         )
         await event.answer([resultm])
         return
@@ -800,7 +800,7 @@ async def inline_id_handler(event: events.InlineQuery.Event):
     if event.query.user_id != bot.uid:
         resultm = builder.article(
             title="- Not Allowded -",
-            text=f"You Can't Use This Bot. \nDeploy Fire-X To Get Your Own Assistant, Repo Link [Here](https://github.com/TeamEviral/Fire-X)",
+            text=f"You Can't Use This Bot. \nDeploy firexuserbot To Get Your Own Assistant, Repo Link [Here](https://github.com/TeamEviral/firexuserbot)",
         )
         await event.answer([resultm])
         return
@@ -834,7 +834,7 @@ async def inline_id_handler(event: events.InlineQuery.Event):
     if event.query.user_id != bot.uid:
         resultm = builder.article(
             title="- Not Allowded -",
-            text=f"You Can't Use This Bot. \nDeploy Fire-X To Get Your Own Assistant, Repo Link [Here](https://github.com/TeamEviral/Fire-X)",
+            text=f"You Can't Use This Bot. \nDeploy firexuserbot To Get Your Own Assistant, Repo Link [Here](https://github.com/TeamEviral/firexuserbot)",
         )
         await event.answer([resultm])
         return
@@ -887,7 +887,7 @@ async def inline_id_handler(event):
     if event.query.user_id != bot.uid:
         resultm = builder.article(
             title="- Not Allowded -",
-            text=f"You Can't Use This Bot. \nDeploy Fire-X To Get Your Own Assistant, Repo Link [Here](https://github.com/TeamEviral/Fire-X)",
+            text=f"You Can't Use This Bot. \nDeploy firexuserbot To Get Your Own Assistant, Repo Link [Here](https://github.com/TeamEviral/firexuserbot)",
         )
         await event.answer([resultm])
         return

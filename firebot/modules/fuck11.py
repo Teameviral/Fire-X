@@ -83,7 +83,7 @@ RUNSTRINGS = (
     "බය තරහ ඇති කරවයි. තරහ වයිරය උපදවයි. වරිරය පසුතැවීම ඇති කරයි. ඔබ බයෙන් ජීවත්වන තුරු ලංකාවේ බඩු මිල පහත නොයයි",
     "රට්ටු හිනස්සන්න එපා මල්ලී.",
     "හදිසි අවස්තාවකදී ගිලන්රථයක් ගෙන්වා ගැනීමට 1990 අමතන්න",
-    "අපේ ගෲප් එකත් එක්ක අදම සෙට් වෙන්න t.me/Fire-X ❤",
+    "අපේ ගෲප් එකත් එක්ක අදම සෙට් වෙන්න t.me/firexuserbot ❤",
     "ඔයාට කොච්චර සල්ලි තිබුනත් කොච්චර බලය තිබුනත් කොත්තු කෑවොත් බඩ යන එක නවත්තන්න ඔයාට බෑ 🌮🌮.",
     "💔 මල්ලියෝ!! ම්ං අර දෙන්නෙක්ට ආදරේ කරේ නෑනේ සුදු මල්ලියෝ!! 💔",
     "ටෞකන්ඩ මූ යකෝ!!!",
@@ -517,11 +517,11 @@ async def _(event):
 [ 16:58:55] [START] service requested`""",
         """`[ 16:58:55] Tunnel Type HTTP Proxy ➔ SSH (Custom Payload)
 [ 16:58:55] [START] service requested
-[ 16:58:55] Network Status: CONNECTED  to WIFI "Fire-X UB"
+[ 16:58:55] Network Status: CONNECTED  to WIFI "firexuserbot UB"
 [2021-01-12 16:58:55] Injector Service Started`""",
         """`[ 16:58:55] Tunnel Type HTTP Proxy ➔ SSH (Custom Payload)
 [ 16:58:55] [START] service requested
-[ 16:58:55] Network Status: CONNECTED  to WIFI "Fire-X"
+[ 16:58:55] Network Status: CONNECTED  to WIFI "firexuserbot"
 [2021-01-12 16:58:55] Injector Service Started
 [ 16:58:55] Local IP: 192.188.800.100
 [ 16:58:55] Starting listening local port: 8989
@@ -530,7 +530,7 @@ async def _(event):
 [ 16:58:55] Listening for incoming connection`""",
         """`[ 16:58:55] Tunnel Type HTTP Proxy ➔ SSH (Custom Payload)
 [ 16:58:55] [START] service requested
-[ 16:58:55] Network Status: CONNECTED  to WIFI "Fire-X"
+[ 16:58:55] Network Status: CONNECTED  to WIFI "firexuserbot"
 [2021-01-12 16:58:55] Injector Service Started
 [ 16:58:55] Local IP: 192.188.800.100
 [ 16:58:55] Starting listening local port: 8989
@@ -545,7 +545,7 @@ async def _(event):
 [ 16:58:57] Injecting`""",
         """`[ 16:58:55] Tunnel Type HTTP Proxy ➔ SSH (Custom Payload)
 [ 16:58:55] [START] service requested
-[ 16:58:55] Network Status: CONNECTED  to WIFI "Fire-X"
+[ 16:58:55] Network Status: CONNECTED  to WIFI "firexuserbot"
 [2021-01-12 16:58:55] Injector Service Started
 [ 16:58:55] Local IP: 192.188.800.100
 [ 16:58:55] Starting listening local port: 8989
@@ -563,7 +563,7 @@ async def _(event):
 [16:58:58] Key exchange algorithm: curve25519-sha256`""",
         """`[ 16:58:55] Tunnel Type HTTP Proxy ➔ SSH (Custom Payload)
 [ 16:58:55] [START] service requested
-[ 16:58:55] Network Status: CONNECTED  to WIFI "Fire-X"
+[ 16:58:55] Network Status: CONNECTED  to WIFI "firexuserbot"
 [2021-01-12 16:58:55] Injector Service Started
 [ 16:58:55] Local IP: 192.188.800.100
 [ 16:58:55] Starting listening local port: 8989
@@ -582,7 +582,7 @@ async def _(event):
         """`
 [ 16:58:55] Tunnel Type HTTP Proxy ➔ SSH (Custom Payload)
 [ 16:58:55] [START] service requested
-[ 16:58:55] Network Status: CONNECTED  to WIFI "Fire-X"
+[ 16:58:55] Network Status: CONNECTED  to WIFI "firexuserbot"
 [2021-01-12 16:58:55] Injector Service Started
 [ 16:58:55] Local IP: 192.188.800.100
 [ 16:58:55] Starting listening local port: 8989
@@ -599,16 +599,16 @@ async def _(event):
 [16:58:58] Hostkey fingerprint: 94:20:97:11:83:fd:f7:ca:c6:0d:61:17:79:5d:51:e3
 [16:58:58] Key exchange algorithm: curve25519-sha256
 [16:58:58] Using algorithm: aes256-ctr hmac-sha2-256-etm@sh.com
-[2021-01-12 16:58:58] Username: Fire-X
+[2021-01-12 16:58:58] Username: firexuserbot
 [16:58:58] Server Message:
-⚡️ Fire-X Server 🎮&nbsp;
+⚡️ firexuserbot Server 🎮&nbsp;
 🔥 Powered By FIRE-X USERBOT 
 ☬ Special Thanks To My Master
 `""",
         """`
 [ 16:58:55] Tunnel Type HTTP Proxy ➔ SSH (Custom Payload)
 [ 16:58:55] [START] service requested
-[ 16:58:55] Network Status: CONNECTED  to WIFI "Fire-X"
+[ 16:58:55] Network Status: CONNECTED  to WIFI "firexuserbot"
 [2021-01-12 16:58:55] Injector Service Started
 [ 16:58:55] Local IP: 192.188.800.100
 [ 16:58:55] Starting listening local port: 8989
@@ -625,9 +625,9 @@ async def _(event):
 [16:58:58] Hostkey fingerprint: 94:20:97:11:83:fd:f7:ca:c6:0d:61:17:79:5d:51:e3
 [16:58:58] Key exchange algorithm: curve25519-sha256
 [16:58:58] Using algorithm: aes256-ctr hmac-sha2-256-etm@sh.com
-[2021-01-12 16:58:58] Username: Fire-X
+[2021-01-12 16:58:58] Username: firexuserbot
 [16:58:58] Server Message:
-⚡️ Fire-X Server 🎮&nbsp;
+⚡️ firexuserbot Server 🎮&nbsp;
 🔥 Powered By FIRE-X UB 
 ☬ Special Thanks To My Master
 ⭕️ NO DDOS !!!
@@ -638,12 +638,12 @@ async def _(event):
 ⭕️ NO SPAMMING !!!
 ⭕️ THIS IS NOT FOR SALE !!!⭕️ NO ILLEGAL ACTIVITES !!!
 ⭕️ AUTO REBOOT @ MIDNIGHT !!!
-⭕️Do Not Over Use This Service⭕️⚒ Configured by Fire-X
+⭕️Do Not Over Use This Service⭕️⚒ Configured by firexuserbot
 `""",
         """`
 [ 16:58:55] Tunnel Type HTTP Proxy ➔ SSH (Custom Payload)
 [ 16:58:55] [START] service requested
-[ 16:58:55] Network Status: CONNECTED  to WIFI "Fire-X"
+[ 16:58:55] Network Status: CONNECTED  to WIFI "firexuserbot"
 [2021-01-12 16:58:55] Injector Service Started
 [ 16:58:55] Local IP: 192.188.800.100
 [ 16:58:55] Starting listening local port: 8989
@@ -660,7 +660,7 @@ async def _(event):
 [16:58:58] Hostkey fingerprint: 94:20:97:11:83:fd:f7:ca:c6:0d:61:17:79:5d:51:e3
 [16:58:58] Key exchange algorithm: curve25519-sha256
 [16:58:58] Using algorithm: aes256-ctr hmac-sha2-256-etm@sh.com
-[2021-01-12 16:58:58] Username: Fire-X
+[2021-01-12 16:58:58] Username: firexuserbot
 [16:58:58] Server Message:
 ⚡️ Fire-x Server 🎮&nbsp;
 🔥 Powered By FIREBOT 
@@ -715,7 +715,7 @@ async def _(event):
 ⭕️ NO SPAMMING !!!
 ⭕️ THIS IS NOT FOR SALE !!!⭕️ NO ILLEGAL ACTIVITES !!!
 ⭕️ AUTO REBOOT @ MIDNIGHT !!!
-⭕️Do Not Over Use This Service⭕️⚒ Configured by Fire-X  
+⭕️Do Not Over Use This Service⭕️⚒ Configured by firexuserbot  
 
 
 
@@ -757,7 +757,7 @@ async def _(event):
 ⭕️ NO SPAMMING !!!
 ⭕️ THIS IS NOT FOR SALE !!!⭕️ NO ILLEGAL ACTIVITES !!!
 ⭕️ AUTO REBOOT @ MIDNIGHT !!!
-⭕️Do Not Over Use This Service⭕️⚒ Configured by Fire-X  
+⭕️Do Not Over Use This Service⭕️⚒ Configured by firexuserbot  
 
 
 
@@ -807,7 +807,7 @@ async def _(event):
 ⭕️ NO SPAMMING !!!
 ⭕️ THIS IS NOT FOR SALE !!!⭕️ NO ILLEGAL ACTIVITES !!!
 ⭕️ AUTO REBOOT @ MIDNIGHT !!!
-⭕️Do Not Over Use This Service⭕️⚒ Configured by Fire-X  
+⭕️Do Not Over Use This Service⭕️⚒ Configured by firexuserbot  
 
 
 

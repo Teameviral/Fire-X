@@ -36,7 +36,7 @@ Time:- {ar}
 Place:- {place}
 Status:- {status}
 Detailed link:- {urlo}
-<u><b>Ekart Search Completed By Fire-X.
+<u><b>Ekart Search Completed By firexuserbot.
 """
     await borg.send_message(
         event.chat_id,

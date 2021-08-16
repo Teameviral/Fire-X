@@ -20,7 +20,7 @@ from telethon.tl.types import InputPhoto, MessageMediaPhoto, User, Chat, Channel
 from firebot import bot, CMD_HELP , AUTONAME , DEFAULT_BIO , ALIVE_NAME
 FIREBOT = " "
 DEFAULTUSER = str(AUTONAME) if AUTONAME else str(ALIVE_NAME)
-DEFAULTUSERBIO = str(DEFAULT_BIO) if DEFAULT_BIO else "Fire-X is best"
+DEFAULTUSERBIO = str(DEFAULT_BIO) if DEFAULT_BIO else "firexuserbot is best"
 BOTLOG_CHATID = Config.PRIVATE_GROUP_BOT_API_ID
 BOTLOG = True
 

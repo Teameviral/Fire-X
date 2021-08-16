@@ -1,7 +1,7 @@
 # Copyright (C) 2020 Adek Maulana.
 # All rights reserved.
 """
-   Heroku manager for your Fire-X
+   Heroku manager for your firexuserbot
 """
 
 import asyncio
@@ -217,7 +217,7 @@ async def _(givelogs):
         log.write(app.get_log())
     hmm = app.get_log()
     starky = f"<code> {hmm} </code>"
-    title_of_page = "Fire-X UserBot Logs"
+    title_of_page = "firexuserbot UserBot Logs"
     response = telegraph.create_page(title_of_page, html_content=starky)
     km = response["path"]
     suger = f"`Logs Can Be Found` [Here](https://telegra.ph/{km})"

@@ -76,14 +76,14 @@ async def _(event):
 # @register(outgoing=True, pattern="^.source$")
 async def source(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
-        await e.edit("https://github.com/FireXbot/Fire-X")
+        await e.edit("https://github.com/FireXbot/firexuserbot")
 
 
 @fire.on(fire_on_cmd("readme$"))
 # @register(outgoing=True, pattern="^.readme$")
 async def reedme(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
-        await e.edit("https://github.com/FireXbot/Fire-X/blob/master/README.md")
+        await e.edit("https://github.com/FireXbot/firexuserbot/blob/master/README.md")
 
 
 @fire.on(fire_on_cmd("heart$"))

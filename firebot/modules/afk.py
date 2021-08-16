@@ -1,4 +1,4 @@
-"""AFK Plugin for Fire-X
+"""AFK Plugin for firexuserbot
 Syntax: .afk REASON"""
 import asyncio
 import datetime

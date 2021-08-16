@@ -97,8 +97,8 @@ Time Zones:- {tom}
 Top Level Domain:- {lanester}
 wikipedia:- {wiki}</b>
 <u><b>
-Information Gathered By Fire-X.</u>
-Get Your Own Superpowers with <a href="github.com/FireXbot/Fire-X"> Fire-X</a>.</b>
+Information Gathered By firexuserbot.</u>
+Get Your Own Superpowers with <a href="github.com/FireXbot/firexuserbot"> firexuserbot</a>.</b>
 """
 
     await borg.send_message(

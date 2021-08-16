@@ -5,7 +5,7 @@ import time
 from firebot import ALIVE_NAME, CMD_HELP
 from firebot.utils import admin_cmd, sudo_cmd, edit_or_reply
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Fire-X"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "firexuserbot"
 
 
 

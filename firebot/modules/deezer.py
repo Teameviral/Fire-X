@@ -107,7 +107,7 @@ async def _(event):
 **Song Name :** {urlhp.get("title")}
 **Duration :** {urlhp.get('duration')} Seconds
 **Artist :** {polu.get("name")}
-Music Downloaded And Uploaded By Fire-X Userbot
+Music Downloaded And Uploaded By firexuserbot Userbot
 Get Your FIRE-X From @FIRE_X_CHANNEL"""
     await ommhg.edit("Song Downloaded.  Waiting To Upload. 🥳🤗")
     c_time = time.time()
