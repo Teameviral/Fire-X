@@ -2,7 +2,7 @@ from firebot import ALIVE_NAME, CMD_HELP
 
 from ..utils import admin_cmd, edit_or_reply, sudo_cmd
 
-DEF = str(ALIVE_NAME) if ALIVE_NAME else "firexuserbot"
+DEF = str(ALIVE_NAME) if ALIVE_NAME else "Fire-X"
 
 
 @bot.on(admin_cmd(pattern="ded (.*)"))

@@ -34,8 +34,8 @@ CMD_HELP.update(
     {
         "power_tools": "**Power Tools**\
 \n\n**Syntax : **`.restart`\
-\n**Usage :** restarts your  firexuserbot.\
+\n**Usage :** restarts your  Fire-X.\
 \n\n**Syntax : **`.shutdown`\
-\n**Usage :** Shuts down your firexuserbot."
+\n**Usage :** Shuts down your Fire-X."
     }
 )

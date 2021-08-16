@@ -67,7 +67,7 @@ HIT = [
     "bashes",
 ]
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "firexuserbot"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Fire-X"
 
 
 @fire.on(fire_on_cmd(pattern="slap ?(.*)", allow_sudo=True))

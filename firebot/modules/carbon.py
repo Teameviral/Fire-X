@@ -88,7 +88,7 @@ async def carbon_api(e):
         await e.client.send_file(
             e.chat_id,
             file,
-            caption="<< `Here's your carbon!` \n **Carbonised By** [firexuserbot](https://github.com/TeamEviral/firexuserbot)>>\n**Colour Scheme: **`{}`".format(
+            caption="<< `Here's your carbon!` \n **Carbonised By** [Fire-X](https://github.com/TeamEviral/Fire-X)>>\n**Colour Scheme: **`{}`".format(
                 color_name
             ),
             force_document=True,

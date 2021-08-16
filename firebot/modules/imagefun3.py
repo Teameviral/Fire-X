@@ -280,7 +280,7 @@ async def howitworks(event):
             event.chat.id,
             file="V.jpg",
             caption="""ㅤ                                            Check Difference
-                                                Done By firexuserbot
+                                                Done By Fire-X
                                             <<Thanks to DARKCOBRA""",
         )
     if x == 2:
@@ -288,7 +288,7 @@ async def howitworks(event):
             event.chat.id,
             file="H.jpg",
             caption="""ㅤ                                            Check Difference 
-                                                 Done By firexuserbot
+                                                 Done By Fire-X
                                             <<Thanks to DARKCOBRA""",
         )
     shutil.rmtree(path)

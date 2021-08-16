@@ -19,7 +19,7 @@ async def _(event):
         with open("JUSTFIRE.jpg", "wb") as f:
             f.write(response.content)
 
-    captin = f"Fake Image By FIRE-X.\nGet Your Own Superpowers From [firexuserbot](github.com/TeamEviral/firexuserbot)."
+    captin = f"Fake Image By FIRE-X.\nGet Your Own Superpowers From [Fire-X](github.com/TeamEviral/Fire-X)."
     fole = "JUSTFIRE.jpg"
     await borg.send_file(event.chat_id, fole, caption=captin)
     await event.delete()

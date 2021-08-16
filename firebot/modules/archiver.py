@@ -52,7 +52,7 @@ async def _(event):
             await borg.send_file(
                 event.chat_id,
                 directory_name + ".rar",
-                caption="rarred By firexuserbot",
+                caption="rarred By Fire-X",
                 force_document=True,
                 allow_cache=False,
                 reply_to=event.message.id,
@@ -100,7 +100,7 @@ async def _(event):
             await borg.send_file(
                 event.chat_id,
                 directory_name + ".7z",
-                caption="7z archived By firexuserbot",
+                caption="7z archived By Fire-X",
                 force_document=True,
                 allow_cache=False,
                 reply_to=event.message.id,
@@ -148,7 +148,7 @@ async def _(event):
             await borg.send_file(
                 event.chat_id,
                 output,
-                caption="TAR By firexuserbot",
+                caption="TAR By Fire-X",
                 force_document=True,
                 allow_cache=False,
                 reply_to=event.message.id,

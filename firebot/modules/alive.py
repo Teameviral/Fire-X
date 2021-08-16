@@ -53,7 +53,7 @@ pm_caption += f"┣•➳➠ `ᴜᴘᴛɪᴍᴇ:` `{uptime}`\n"
 pm_caption += f"┣•➳➠ `ᴄʜᴀɴɴᴇʟ:` [ᴊᴏɪɴ](https://t.me/Fire_X_CHANNEL)\n"
 pm_caption += f"┗━━━━━━━━━━━━━━━━━━━\n"
 pm_caption += f" ||•|| sᴇᴄᴜʀɪᴛʏ ʙʏ ғɪʀᴇ-x ||•||\n"
-pm_caption += " [ɢɪᴛʜᴜʙ](https://github.com/TeamEviral/firexuserbot) • [ɢʀᴏᴜᴘ](https://t.me/FireXUserBot)"
+pm_caption += " [ɢɪᴛʜᴜʙ](https://github.com/TeamEviral/Fire-X) • [ɢʀᴏᴜᴘ](https://t.me/FireXUserBot)"
 
 
 @fire.on(fire_on_cmd(pattern=r"alive"))

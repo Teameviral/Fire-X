@@ -52,8 +52,8 @@ RUN apt-get install -y\
 RUN axel https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && apt install -y ./google-chrome-stable_current_amd64.deb && rm google-chrome-stable_current_amd64.deb
 RUN axel https://chromedriver.storage.googleapis.com/88.0.4324.96/chromedriver_linux64.zip && unzip chromedriver_linux64.zip && chmod +x chromedriver && mv -f chromedriver /usr/bin/ && rm chromedriver_linux64.zip
 #Import Gudz
-RUN wget https://raw.githubusercontent.com/TeamEviral/firexuserbot/master/firebotmain.py
-RUN wget https://raw.githubusercontent.com/TeamEviral/firexuserbot/master/requirements.txt
+RUN wget https://raw.githubusercontent.com/TeamEviral/Fire-X/master/firebotmain.py
+RUN wget https://raw.githubusercontent.com/TeamEviral/Fire-X/master/requirements.txt
 #Start Fumkin
 RUN pip3 install -r requirements.txt
 

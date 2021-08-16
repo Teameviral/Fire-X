@@ -1,15 +1,15 @@
 <p align="center">
    
-   <a href="https://github.com/TeamEviral/firexuserbot">
+   <a href="https://github.com/TeamEviral/Fire-X">
       <img src="https://telegra.ph/file/4fd8dcd5319be4e025022.jpg" alt="firex", height="300px",width="300px">
    </a>
    <br>
-   <b>firexuserbot UserBot</b><br>
+   <b>Fire-X UserBot</b><br>
    <i>The Awaited Bot</i>
 </p>
  
    
-# [firexuserbot](https://t.me/FireXUserBot) userbot
+# [Fire-X](https://t.me/FireXUserBot) userbot
 
 The Most Powerful Telegram Userbot.
 This Userbot is Safe to use in Your Telegram Account.
@@ -18,9 +18,9 @@ It is not like the other bots which are being Suspended by Heroku. Hence, it can
 
 ## ᑈֆօƈɨǟʟ ՏԵɑԵմՏ օƒ ɮօԵ ᐵ 
 
-<p align="left"><a href="https://github.com/TeamEviral/firexuserbot/network/members"><img src="https://img.shields.io/github/forks/TeamEviral/firexuserbot?label=Forks&logoColor=purple&style=social"></a><p align="left"><a href="https://github.com/TeamEviral/firexuserbot/stargazers"><img src="https://img.shields.io/github/stars/TeamEviral/firexuserbot?logoColor=red&style=social"></a><p align="left"><a href="https://github.com/TeamEviral/firexuserbot"><img src="https://img.shields.io/github/last-commit/TeamEviral/firexuserbot?logoColor=brown&style=plastic"></a>
+<p align="left"><a href="https://github.com/TeamEviral/Fire-X/network/members"><img src="https://img.shields.io/github/forks/TeamEviral/Fire-X?label=Forks&logoColor=purple&style=social"></a><p align="left"><a href="https://github.com/TeamEviral/Fire-X/stargazers"><img src="https://img.shields.io/github/stars/TeamEviral/Fire-X?logoColor=red&style=social"></a><p align="left"><a href="https://github.com/TeamEviral/Fire-X"><img src="https://img.shields.io/github/last-commit/TeamEviral/Fire-X?logoColor=brown&style=plastic"></a>
 
-# How to Deploy firexuserbot Userbot?
+# How to Deploy Fire-X Userbot?
 Tutorial Coming soon
    
 ##### Deploy
@@ -41,12 +41,12 @@ FROM
 
 
 ### SESSION STRING 
-<a href="https://replit.com/@chrisdroid1/firexuserbot-String-Gen#main.py"><img alt="Run on Repl.it" src="https://camo.githubusercontent.com/05149b448485553c6f14f6430a45c12dcc79ed3c/68747470733a2f2f7265706c2e69742f62616467652f6769746875622f6a61727669733231303930342f4a6172766973" style="border-style: none; box-sizing: initial; max-width: 100%;" /></a></div>
+<a href="https://replit.com/@chrisdroid1/Fire-X-String-Gen#main.py"><img alt="Run on Repl.it" src="https://camo.githubusercontent.com/05149b448485553c6f14f6430a45c12dcc79ed3c/68747470733a2f2f7265706c2e69742f62616467652f6769746875622f6a61727669733231303930342f4a6172766973" style="border-style: none; box-sizing: initial; max-width: 100%;" /></a></div>
 #### SAFE TO USE 😌
 
 ## HOST YOUR FIRE-X on VPS✳️ 
 ```
-$ git clone `https://github.com/TeamEviral/firexuserbot`
+$ git clone `https://github.com/TeamEviral/Fire-X`
 $ cd firebot 
 #install requirements
 
@@ -76,7 +76,7 @@ STRING_SESSION [+] - STRING SESSION
 - [Fire-XUserBot](https://github.com/DevsExpo/Fire-XUserBot)❤️ - 
 Most of the Plugins Taken from this Project.. Made possible by this. Full Credits. Full Respect
 
-- [Virtualuserbot](https://github.com/TeamDaisyX/firexuserbot)🔥-
+- [Virtualuserbot](https://github.com/TeamDaisyX/Fire-X)🔥-
 Took a lot of commands thanks to INUKA-ASITH
 
 - [DarkCobra](https://github.com/DARK-COBRA/DARKCOBRA) 😍 - 

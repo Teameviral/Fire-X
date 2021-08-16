@@ -19,7 +19,7 @@ AUTONAME = os.environ.get("AUTONAME", None)
 DEFAULT_BIO = os.environ.get("DEFAULTBIO", None)
 DEFAULTUSERBIO = str(DEFAULT_BIO) if DEFAULT_BIO else " ᗯᗩᏆᎢᏆᑎᏀ ᏞᏆᏦᗴ ᎢᏆᗰᗴ  "
 CHANGE_TIME = int(os.environ.get("CHANGE_TIME", 60))
-DEFAULTUSER = str(AUTONAME) if AUTONAME else "firexuserbot"
+DEFAULTUSER = str(AUTONAME) if AUTONAME else "Fire-X"
 
 FONT_FILE_TO_USE = "Fonts/vermin_vibes.ttf"
 global AUTOPICSTART

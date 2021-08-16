@@ -25,7 +25,7 @@ async def install(event):
                 shortname = path1.stem
                 load_module(shortname.replace(".py", ""))
                 await event.edit(
-                    "firexuserbot Installed `{}` Sucessfully.".format(
+                    "Fire-X Installed `{}` Sucessfully.".format(
                         os.path.basename(downloaded_file_name)
                     )
                 )

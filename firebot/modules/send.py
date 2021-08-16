@@ -18,7 +18,7 @@ async def send(event):
     the_plugin_file = "./firebot/modules/{}.py".format(input_str)
     end = datetime.now()
     (end - start).seconds
-    men = f"Plugin Name - {input_str}.py \nUploaded By firexuserbot"
+    men = f"Plugin Name - {input_str}.py \nUploaded By Fire-X"
     await event.client.send_file(  # pylint:disable=E0602
         event.chat_id,
         the_plugin_file,

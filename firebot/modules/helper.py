@@ -1,7 +1,7 @@
 from firebot import ALIVE_NAME, CMD_LIST, lang
 from firebot.utils import fire_on_cmd
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "firexuserbot"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Fire-X"
 
 
 @borg.on(fire_on_cmd(pattern="help ?(.*)"))
@@ -32,7 +32,7 @@ async def cmd_list(event):
             else:
                 await event.edit(input_str + " is not a valid plugin!")
         else:
-            help_string = f"""firexuserbot Modules Are Listed Here !\n
+            help_string = f"""Fire-X Modules Are Listed Here !\n
 For More Help or Support contact {DEFAULTUSER}\nCurrently Used Language - {lang}"""
             results = await bot.inline_query(  # pylint:disable=E0602
                 tgbotusername, help_string

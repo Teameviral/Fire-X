@@ -294,7 +294,7 @@ async def _(event):
     elif Counter >= 1:
         file1 = open("goood.txt", "a")
         file1.write(
-            "\nCHECKED BY firexuserbot. "
+            "\nCHECKED BY Fire-X. "
         )
         file1.close()
         await borg.send_file(
