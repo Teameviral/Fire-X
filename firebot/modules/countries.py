@@ -98,7 +98,7 @@ Top Level Domain:- {lanester}
 wikipedia:- {wiki}</b>
 <u><b>
 Information Gathered By firexuserbot.</u>
-Get Your Own Superpowers with <a href="github.com/FireXbot/firexuserbot"> firexuserbot</a>.</b>
+Get Your Own Superpowers with <a href="github.com/TeamEviral/firexuserbot"> firexuserbot</a>.</b>
 """
 
     await borg.send_message(

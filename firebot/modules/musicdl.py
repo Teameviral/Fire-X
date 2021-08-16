@@ -38,7 +38,7 @@ async def _(event):
             await borg.send_file(
                 event.chat_id,
                 songh,
-                caption="🔆**Here's the requested song!**🔆\n`Check out` [firexuserbot](https://github.com/FireXbot/firexuserbot)",
+                caption="🔆**Here's the requested song!**🔆\n`Check out` [firexuserbot](https://github.com/TeamEviral/firexuserbot)",
             )
             await event.delete()
         except YouBlockedUserError:

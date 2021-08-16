@@ -1,6 +1,6 @@
 <p align="center">
    
-   <a href="https://github.com/FireXbot/firexuserbot">
+   <a href="https://github.com/TeamEviral/firexuserbot">
       <img src="https://telegra.ph/file/4fd8dcd5319be4e025022.jpg" alt="firex", height="300px",width="300px">
    </a>
    <br>
@@ -18,13 +18,13 @@ It is not like the other bots which are being Suspended by Heroku. Hence, it can
 
 ## ᑈֆօƈɨǟʟ ՏԵɑԵմՏ օƒ ɮօԵ ᐵ 
 
-<p align="left"><a href="https://github.com/FireXbot/firexuserbot/network/members"><img src="https://img.shields.io/github/forks/FireXbot/firexuserbot?label=Forks&logoColor=purple&style=social"></a><p align="left"><a href="https://github.com/FireXbot/firexuserbot/stargazers"><img src="https://img.shields.io/github/stars/FireXbot/firexuserbot?logoColor=red&style=social"></a><p align="left"><a href="https://github.com/FireXbot/firexuserbot"><img src="https://img.shields.io/github/last-commit/FireXbot/firexuserbot?logoColor=brown&style=plastic"></a>
+<p align="left"><a href="https://github.com/TeamEviral/firexuserbot/network/members"><img src="https://img.shields.io/github/forks/TeamEviral/firexuserbot?label=Forks&logoColor=purple&style=social"></a><p align="left"><a href="https://github.com/TeamEviral/firexuserbot/stargazers"><img src="https://img.shields.io/github/stars/TeamEviral/firexuserbot?logoColor=red&style=social"></a><p align="left"><a href="https://github.com/TeamEviral/firexuserbot"><img src="https://img.shields.io/github/last-commit/TeamEviral/firexuserbot?logoColor=brown&style=plastic"></a>
 
 # How to Deploy firexuserbot Userbot?
 Tutorial Coming soon
    
 ##### Deploy
-<a href="https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FFireXbot%2Ffire-X&amp;template=https%3A%2F%2Fgithub.com%2FFireXbot%2Ffire-X" rel="nofollow" style="background-color: initial; box-sizing: border-box; color: #0366d6; text-decoration-line: none;"><img alt="Deploy To Heroku" src="https://camo.githubusercontent.com/83b0e95b38892b49184e07ad572c94c8038323fb/68747470733a2f2f7777772e6865726f6b7563646e2e636f6d2f6465706c6f792f627574746f6e2e737667" style="border-style: none; box-sizing: initial; max-width: 100%;" /></a></div>
+<a href="https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FTeamEviral%2Ffire-X&amp;template=https%3A%2F%2Fgithub.com%2FTeamEviral%2Ffire-X" rel="nofollow" style="background-color: initial; box-sizing: border-box; color: #0366d6; text-decoration-line: none;"><img alt="Deploy To Heroku" src="https://camo.githubusercontent.com/83b0e95b38892b49184e07ad572c94c8038323fb/68747470733a2f2f7777772e6865726f6b7563646e2e636f6d2f6465706c6f792f627574746f6e2e737667" style="border-style: none; box-sizing: initial; max-width: 100%;" /></a></div>
      
      
 
@@ -46,7 +46,7 @@ FROM
 
 ## HOST YOUR FIRE-X on VPS✳️ 
 ```
-$ git clone `https://github.com/FireXbot/firexuserbot`
+$ git clone `https://github.com/TeamEviral/firexuserbot`
 $ cd firebot 
 #install requirements
 

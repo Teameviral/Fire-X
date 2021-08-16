@@ -43,7 +43,7 @@ if lang == "si":
         elif event.query.user_id == bot.uid and query == "stats":
             result = builder.article(
                 title="Stats",
-                text=f"**Showing Stats For {DEFAULTUSER}'s firexuserbotBot** \nNote --> Only Owner Can Check This \n(C) [firexuserbot](https://github.com/FireXbot/firexuserbot)",
+                text=f"**Showing Stats For {DEFAULTUSER}'s firexuserbotBot** \nNote --> Only Owner Can Check This \n(C) [firexuserbot](https://github.com/TeamEviral/firexuserbot)",
                 buttons=[
                     [custom.Button.inline("Show Stats ?", data="terminator")],
                     [Button.url("Developed By", "https://github.com/TeamEviral")],
