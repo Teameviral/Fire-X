@@ -64,7 +64,7 @@ async def _(event):
         )
     else:
         await event.edit(
-            "ReMove.BG API returned Errors. Please report to @InfinityJE\n`{}".format(
+            "ReMove.BG API returned Errors. Please report to @Fire-X\n`{}".format(
                 output_file_name.content.decode("UTF-8")
             )
         )
