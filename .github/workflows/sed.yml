@@ -8,7 +8,7 @@ jobs:
       - name: Find and Replace
         uses: jacobtomlinson/gha-find-replace@master
         with:
-          find: "VirtualUserbot"
+          find: "InfinityJE"
           replace: "Fire-X"
       - name: Pull All Updates
         uses: stefanzweifel/git-auto-commit-action@v4
