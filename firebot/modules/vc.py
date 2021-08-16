@@ -4,7 +4,7 @@ from telethon.tl.functions.phone import DiscardGroupCallRequest
 from telethon.tl.functions.phone import GetGroupCallRequest
 from telethon.tl.functions.phone import InviteToGroupCallRequest
 
-from . import *
+from firebot import firebot.utils
 
 
 async def getvc(event):
