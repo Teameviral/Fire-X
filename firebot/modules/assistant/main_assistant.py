@@ -79,7 +79,8 @@ async def help(event):
             event.chat_id,
             message="You Can Deploy Fire-X In Heroku By Following Steps Bellow, You Can See Some Quick Guides On Support Channel Or On Your Own Assistant Bot. \nThank You For Contacting Me.",
             buttons=[
-                [Button.url("Deploy Tutorial is coming soon 📺", "coming soon")],
+                [custom.Button.inline("Deploy your Fire-X", data="deploy")],
+                [Button.url("Help Me ❓", "https://t.me/firexuserbot")],
                 [Button.url("Github Repo ❓", "github.com/TeamEviral/Fire-X")],
             ],
         )
