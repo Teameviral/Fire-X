@@ -10,7 +10,7 @@ from firebot.utils import admin_cmd, sudo_cmd, edit_or_reply
 from . import *
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Fire-X User"
-mafia = borg.uid
+
 
 PICS_STR = []
 
