@@ -78,6 +78,7 @@ async def help(event):
         await tgbot.send_message(
             event.chat_id,
             message="You Can Deploy Fire-X In Heroku By Following Steps Bellow, You Can See Some Quick Guides On Support Channel Or On Your Own Assistant Bot. \nThank You For Contacting Me.",
+            link_preview=False,
             buttons=[
                 [custom.Button.inline("Deploy your Fire-X", data="deploy")],
                 [Button.url("Help Me ❓", "https://t.me/firexuserbot")],
