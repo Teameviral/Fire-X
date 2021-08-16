@@ -76,7 +76,7 @@ STRING_SESSION [+] - STRING SESSION
 - [FridayUserBot](https://github.com/DevsExpo/FridayUserBot)❤️ - 
 Most of the Plugins Taken from this Project.. Made possible by this. Full Credits. Full Respect
 
-- [Virtualuserbot](https://github.com/TeamDaisyX/VirtualUserbot)🔥-
+- [Virtualuserbot](https://github.com/TeamDaisyX/Fire-X)🔥-
 Took a lot of commands thanks to INUKA-ASITH
 
 - [DarkCobra](https://github.com/DARK-COBRA/DARKCOBRA) 😍 - 

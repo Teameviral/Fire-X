@@ -17,7 +17,7 @@ async def _(event):
     reply_message = await event.get_reply_message()
     chat = "@FileToLinkDXBot"
     reply_message.sender
-    await event.edit("**Making public url...\n Powered by @VirtualUserbot**")
+    await event.edit("**Making public url...\n Powered by @Fire-X**")
     async with event.client.conversation(chat) as conv:
         try:
             response = conv.wait_event(
@@ -47,7 +47,7 @@ async def _(event):
         return
     chat = "@chotamreaderbot"
     reply_message.sender
-    await event.edit("**Making instant view...\n Powered by @VirtualUserbot**")
+    await event.edit("**Making instant view...\n Powered by @Fire-X**")
     async with event.client.conversation(chat) as conv:
         try:
             response = conv.wait_event(

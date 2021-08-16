@@ -72,7 +72,7 @@ async def __(message):
             m,
             reply_to=reply.id,
             voice_note=True,
-            caption="Bass Boosted, \nDone By VirtualUserbot",
+            caption="Bass Boosted, \nDone By Fire-X",
         )
         os.remove(m)
     else:
