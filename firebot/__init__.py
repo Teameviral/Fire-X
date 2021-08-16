@@ -101,7 +101,7 @@ if bool(ENV):
     HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", None)
 
     # Pm Permit Img
-    PMPERMIT_PIC = os.environ.get("PMPERMIT_PIC", None)
+    PMPERMIT_PIC = os.environ.get("PMPERMIT_PIC", "https://telegra.ph/file/4fd8dcd5319be4e025022.jpg")
     # PRIVATE_GROUP_ID = os.environ.get("PRIVATE_GROUP_ID", None)
     AUTONAME = os.environ.get("AUTONAME", None)
     CUSTOM_PMPERMIT = os.environ.get("CUSTOM_PMPERMIT", None)
@@ -120,8 +120,8 @@ if bool(ENV):
     YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY", None)
 
     # Default .alive name
-    ALIVE_NAME = os.environ.get("ALIVE_NAME", None)
-    lang = os.environ.get("lang", "si")
+    ALIVE_NAME = os.environ.get("ALIVE_NAME", "https://telegra.ph/file/4fd8dcd5319be4e025022.jpg")
+    lang = os.environ.get("lang", "en")
     pro = os.environ.get("pro", False)
     LESS_SPAMMY = os.environ.get("LESS_SPAMMY", True)
 
