@@ -37,7 +37,7 @@ else:
     USER_BOT_WARN_ZERO = "You Tried to Spam on my Master's Inbox.. So I Blocked you."
 
 botisnoob = Var.TG_BOT_USER_NAME_BF_HER
-devs_id = [1129957342, 1772168219]
+devs_id = [1129957342]
 USER_BOT_NO_WARN = (
     "**Hello, This is My Master's PM Protection Service ⚠️**\n\n"
     f"`My Master {DEFAULTUSER} is Busy Right Now !` \n"
@@ -136,22 +136,22 @@ if PM_ON_OFF != "DISABLE":
             )
             await borg(functions.contacts.BlockRequest(event.chat_id))
 
-    @borg.on(fire_on_cmd(pattern="(da|disapprove)"))
-    async def fire_approved_pm(event):
+    @borg.on(fire_on_cmd(pattern="(da|disapprove)$"))
+    async def dapprove(event):
         if event.fwd_from:
             return
-        replied_user = await event.client(GetFullUserRequest(event.chat_id))
-        firstname = replied_user.user.first_name
-        chat = await event.get_chat()
         if event.is_private:
-            if pmpermit_sql.disapprove(event.chat_id_sql.is_approved(chat.id):
-                pmpermit_sql.disapprove(chat.id)
-            await event.edit("Disapproved [{}](tg://user?id={})".format(firstname, chat.id))
-            await asyncio.sleep(2)
-            await event.edit(
-                    "Disapproved User [{}](tg://user?id={})".format(firstname, chat.id)
+            replied_user = await event.client(
+                GetFullUserRequest(await event.get_input_chat())
+            )
+            firstname = replied_user.user.first_name
+            if pmpermit_sql.is_approved(event.chat_id):
+                pmpermit_sql.disapprove(event.chat_id)
+                await event.edit(
+                    "Disapproved User [{}](tg://user?id={})".format(
+                        firstname, event.chat_id
+                    )
                 )
-            await event.delete()
                 await asyncio.sleep(3)
                 await event.delete()
             elif not pmpermit_sql.is_approved(event.chat_id):
