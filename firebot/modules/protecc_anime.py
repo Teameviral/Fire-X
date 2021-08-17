@@ -149,6 +149,6 @@ CMD_HELP.update(
 \n\n**Syntax : **`.adwaifu `\
 \n**Usage :** Adds the current group to AutoWaifu Database. Need to setup WAIFU_CATCHER var with value TRUE\
 \n\n**Syntax : **`.rmwaifu`\
-\n**Usage :** Removes the group from AutoWaifu Database.\
+\n**Usage :** Removes the group from AutoWaifu Database.\"
     }
 )
