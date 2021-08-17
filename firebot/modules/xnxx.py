@@ -6,7 +6,6 @@
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
-from firebot import pro
 
 from ..utils import admin_cmd
 
@@ -14,8 +13,6 @@ from ..utils import admin_cmd
 
 @borg.on(admin_cmd(pattern="xnxx?(.*)"))
 async def _(event):
-    if pro == "True":
-        return
     if event.fwd_from:
         return
     input_str = event.pattern_match.group(1)
@@ -42,8 +39,6 @@ async def _(event):
 
 @borg.on(admin_cmd(pattern="picx?(.*)"))
 async def _(event):
-    if pro == "True":
-        return
     if event.fwd_from:
         return
     input_str = event.pattern_match.group(1)
@@ -70,8 +65,6 @@ async def _(event):
 
 @borg.on(admin_cmd(pattern="les?(.*)"))
 async def _(event):
-    if pro == "True":
-        return
     if event.fwd_from:
         return
     input_str = event.pattern_match.group(1)
