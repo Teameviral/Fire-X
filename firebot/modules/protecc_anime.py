@@ -8,9 +8,8 @@ from asyncio import sleep
 from bs4 import BeautifulSoup
 
 from firebot.modules.sql_helper.waifu_sql import is_harem, add_grp, rm_grp, get_all_grp
-from firebot.utils import fire_on_cmd
 from . import *
-from ..utils import sudo_cmd
+from firebot.utils import sudo_cmd, fire_on_cmd 
 from firebot import events
 
 qt = "A qt waifu appeared!"
@@ -142,3 +141,4 @@ async def _(event):
         return
     rm_grp(str(event.chat_id))
     await eod(event, f"**Removed Chat** {event.chat.title} **With Id** `{event.chat_id}` **From AutoWaifu Database.**")
+
