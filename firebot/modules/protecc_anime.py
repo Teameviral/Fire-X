@@ -8,7 +8,7 @@ from asyncio import sleep
 from bs4 import BeautifulSoup
 
 from firebot.modules.sql_helper.waifu_sql import is_harem, add_grp, rm_grp, get_all_grp
-from . import *
+from firebot.utils import fire_on_cmd, sudo_cmd
 
 qt = "A qt waifu appeared!"
 
