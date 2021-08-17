@@ -139,16 +139,3 @@ async def _(event):
         return
     rm_grp(str(event.chat_id))
     await eod(event, f"**Removed Chat** {event.chat.title} **With Id** `{event.chat_id}` **From AutoWaifu Database.**")
-
-
-CMD_HELP.update(
-    {
-        "Protecc": "**protecc**\
-\n\n**Syntax : **`.pt <reply>`\
-\n**Usage :** Auto protect the waifu.\
-\n\n**Syntax : **`.adwaifu `\
-\n**Usage :** Adds the current group to AutoWaifu Database. Need to setup WAIFU_CATCHER var with value TRUE\
-\n\n**Syntax : **`.rmwaifu`\
-\n**Usage :** Removes the group from AutoWaifu Database.\"
-    }
-)
