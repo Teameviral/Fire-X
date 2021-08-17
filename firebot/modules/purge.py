@@ -9,14 +9,12 @@ from asyncio import sleep
 
 from telethon.errors import rpcbaseerrors
 
-from firebot import BOTLOG, BOTLOG_CHATID, CMD_HELP
-from firebot.utils import admin_cmd, errors_handler, sudo_cmd, edit_or_reply
+from userbot import BOTLOG, BOTLOG_CHATID, CMD_HELP
+from userbot.utils import lightning_cmd, errors_handler
 
 
-
-
-@bot.on(admin_cmd(pattern=r"purge", outgoing=True))
-@bot.on(sudo_cmd(pattern=r"purge", allow_sudo=True))
+# @register(outgoing=True, pattern="^.purge$")
+@borg.on(lightning_cmd(pattern=r"purge"))
 @errors_handler
 async def fastpurger(purg):
     """ For .purge command, purge all messages starting from the reply. """
@@ -48,8 +46,7 @@ async def fastpurger(purg):
 
 
 # @register(outgoing=True, pattern="^.purgeme")
-@bot.on(admin_cmd(pattern=r"purgeme", outgoing=True))
-@bot.on(sudo_cmd(pattern=r"purgeme", allow_sudo=True))
+@borg.on(lightning_cmd(pattern=r"purgeme"))
 @errors_handler
 async def purgeme(delme):
     """ For .purgeme, delete x count of your latest message."""
@@ -76,8 +73,51 @@ async def purgeme(delme):
     await smsg.delete()
 
 
-@bot.on(admin_cmd(pattern=r"sd", outgoing=True))
-@bot.on(sudo_cmd(pattern=r"sd", allow_sudo=True))
+# @register(outgoing=True, pattern="^.del$")
+@borg.on(lightning_cmd(pattern=r"del"))
+@errors_handler
+async def delete_it(delme):
+    """ For .del command, delete the replied message. """
+    msg_src = await delme.get_reply_message()
+    if delme.reply_to_msg_id:
+        try:
+            await msg_src.delete()
+            await delme.delete()
+            if BOTLOG:
+                await delme.client.send_message(
+                    BOTLOG_CHATID, "Deletion of message was successful"
+                )
+        except rpcbaseerrors.BadRequestError:
+            if BOTLOG:
+                await delme.client.send_message(
+                    BOTLOG_CHATID, "Well, I can't delete a message"
+                )
+
+
+# @register(outgoing=True, pattern="^.edit")
+@borg.on(lightning_cmd(pattern=r"edit"))
+@errors_handler
+async def editer(edit):
+    """ For .editme command, edit your last message. """
+    message = edit.text
+    chat = await edit.get_input_chat()
+    self_id = await edit.client.get_peer_id("me")
+    string = str(message[6:])
+    i = 1
+    async for message in edit.client.iter_messages(chat, self_id):
+        if i == 2:
+            await message.edit(string)
+            await edit.delete()
+            break
+        i = i + 1
+    if BOTLOG:
+        await edit.client.send_message(
+            BOTLOG_CHATID, "Edit query was executed successfully"
+        )
+
+
+# @register(outgoing=True, pattern="^.sd")
+@borg.on(lightning_cmd(pattern=r"sd"))
 @errors_handler
 async def selfdestruct(destroy):
     """ For .sd command, make seflf-destructable messages. """
@@ -90,3 +130,21 @@ async def selfdestruct(destroy):
     await smsg.delete()
     if BOTLOG:
         await destroy.client.send_message(BOTLOG_CHATID, "sd query done successfully")
+
+
+CMD_HELP.update(
+    {
+        "purge": ".purge\
+\n\n**Syntax: **`.purge`\
+\n**Usage: **Purges all messages starting from the reply.
+\n\n**Syntax: **`.purgeme` <x>\
+\n**Usage:** Deletes x amount of your latest messages.
+\n\n**Syntax:**`.del`\
+\n**Usage: **Deletes the message you replied to.
+\n\n**Syntax: **`.edit` <newmessage>\
+\n**Usage: **Replace your last message with <newmessage>.
+\n\n**Syntax: **`.sd` <x> <message>\
+\n**Usage: **Creates a message that selfdestructs in x seconds.\
+\nKeep the seconds under 100 since it puts your bot to sleep."
+    }
+)
