@@ -2,7 +2,8 @@ import asyncio
 
 import telethon.utils
 from telethon import events
-from uniborg.util import fire_on_cmd
+from firebot.utils import admin_cmd, sudo_cmd, edit_or_reply
+from uniborg.util import re
 
 
 async def get_target_message(event):
@@ -28,8 +29,8 @@ async def await_read(chat, message):
     await fut
 
 
-@fire.on(fire_on_cmd(pattern="(del)(?:ete)?$"))
-@fire.on(fire_on_cmd(pattern="(edit)(?:\s+(.*))?$"))
+@bot.on(admin_cmd(pattern="(del)(?:ete)?$"))
+@bot.on(admin_cmd(pattern="(edit)(?:\s+(.*))?$"))
 async def delete(event):
     await event.delete()
     command = event.pattern_match.group(1)
