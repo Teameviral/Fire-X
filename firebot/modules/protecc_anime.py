@@ -141,19 +141,6 @@ async def _(event):
     await eod(event, f"**Removed Chat** {event.chat.title} **With Id** `{event.chat_id}` **From AutoWaifu Database.**")
 
 
-
-CmdHelp("protecc").add_command(
-  "pt", "<reply>", "Auto Protecc the waifu."
-).add_command(
-  "adwaifu", None, "Adds the current group to AutoWaifu Database. Need to setup WAIFU_CATCHER var with value TRUE."
-).add_command(
-  "rmwaifu", None, "Removes the group from AutoWaifu Database."
-).add_info(
-  "Waifu Protecc."
-).add_warning(
-  "✅ Harmless Module."
-).add()
-
 CMD_HELP.update(
     {
         "Protecc": "**protecc**\
