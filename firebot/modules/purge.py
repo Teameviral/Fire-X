@@ -9,12 +9,12 @@ from asyncio import sleep
 
 from telethon.errors import rpcbaseerrors
 
-from userbot import BOTLOG, BOTLOG_CHATID, CMD_HELP
-from userbot.utils import lightning_cmd, errors_handler
+from firebot import BOTLOG, BOTLOG_CHATID, CMD_HELP
+from firebot.utils import fire_on_cmd, errors_handler
 
 
 # @register(outgoing=True, pattern="^.purge$")
-@borg.on(lightning_cmd(pattern=r"purge"))
+@borg.on(fire_on_cmd(pattern=r"purge"))
 @errors_handler
 async def fastpurger(purg):
     """ For .purge command, purge all messages starting from the reply. """
@@ -46,7 +46,7 @@ async def fastpurger(purg):
 
 
 # @register(outgoing=True, pattern="^.purgeme")
-@borg.on(lightning_cmd(pattern=r"purgeme"))
+@borg.on(fire_on_cmd(pattern=r"purgeme"))
 @errors_handler
 async def purgeme(delme):
     """ For .purgeme, delete x count of your latest message."""
@@ -74,7 +74,7 @@ async def purgeme(delme):
 
 
 # @register(outgoing=True, pattern="^.del$")
-@borg.on(lightning_cmd(pattern=r"del"))
+@borg.on(fire_on_cmd(pattern=r"del"))
 @errors_handler
 async def delete_it(delme):
     """ For .del command, delete the replied message. """
@@ -95,7 +95,7 @@ async def delete_it(delme):
 
 
 # @register(outgoing=True, pattern="^.edit")
-@borg.on(lightning_cmd(pattern=r"edit"))
+@borg.on(fire_on_cmd(pattern=r"edit"))
 @errors_handler
 async def editer(edit):
     """ For .editme command, edit your last message. """
@@ -117,7 +117,7 @@ async def editer(edit):
 
 
 # @register(outgoing=True, pattern="^.sd")
-@borg.on(lightning_cmd(pattern=r"sd"))
+@borg.on(fire_on_cmd(pattern=r"sd"))
 @errors_handler
 async def selfdestruct(destroy):
     """ For .sd command, make seflf-destructable messages. """
