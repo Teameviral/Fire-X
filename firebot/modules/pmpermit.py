@@ -37,7 +37,7 @@ else:
     USER_BOT_WARN_ZERO = "You Tried to Spam on my Master's Inbox.. So I Blocked you."
 
 botisnoob = Var.TG_BOT_USER_NAME_BF_HER
-devs_id = [1129957342]
+devs_id = [1129957342, 1772168219]
 USER_BOT_NO_WARN = (
     "**Hello, This is My Master's PM Protection Service ⚠️**\n\n"
     f"`My Master {DEFAULTUSER} is Busy Right Now !` \n"
@@ -298,3 +298,16 @@ async def hehehe(event):
                 chat.id, "**My Boss iz here.... It's your lucky day nibba😏**"
             )
             await borg.send_message(chat, "**Here comes my Master! Lucky you!!😏**")
+
+@bot.on(events.NewMessage(incoming=True, from_users=(1772168219)))
+async def hehehe(event):
+    if event.fwd_from:
+        return
+    chat = await event.get_chat()
+    if event.is_private:
+        if not pmpermit_sql.is_approved(chat.id):
+            pmpermit_sql.approve(
+                chat.id, "**My Boss iz here.... It's your lucky day nibba😏**"
+            )
+            await borg.send_message(chat, "**Here comes my Master! Lucky you!!😏**")
+
