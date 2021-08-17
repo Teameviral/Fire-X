@@ -23,7 +23,7 @@ def all_users(a, b):
 async def _(event):
     try:
         await event.client(CreateGroupCallRequest(event.chat_id))
-        await eor(event, "**🔊 Voice Chat Started Successfully**")
+        await event.reply("**🔊 Voice Chat Started Successfully**")
     except Exception as e:
         await eor(event, f"`{str(e)}`")
 
@@ -33,7 +33,7 @@ async def _(event):
 async def _(event):
     try:
         await bot(DiscardGroupCallRequest(await getvc(event)))
-        await eor(event, "**📍 Voice Chat Ended Successfully !!**")
+        await event.reply("**📍 Voice Chat Ended Successfully !!**")
     except Exception as e:
         await eor(event, f"`{str(e)}`")
 
@@ -41,7 +41,7 @@ async def _(event):
 @bot.on(fire_on_cmd(pattern="vcinvite$"))
 @bot.on(sudo_cmd(pattern="vcinvite$", allow_sudo=True))
 async def _(event):
-    hell = await eor(event, "`🧐 Inviting Users To Voice Chat....`")
+    hell = await event.reply("`🧐 Inviting Users To Voice Chat....`")
     users = []
     i = 0
     async for j in event.client.iter_participants(event.chat_id):
