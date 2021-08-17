@@ -7,7 +7,7 @@ from telethon.tl.functions.users import GetFullUserRequest
 
 from firebot import ALIVE_NAME, CUSTOM_PMPERMIT, lang
 from firebot.Configs import Config
-from firebot.utils import fire_on_cmd
+from firebot.utils import admin_cmd
 
 from .sql_helper import pmpermit_sql as pmpermit_sql
 
@@ -210,7 +210,7 @@ if Var.PRIVATE_GROUP_ID is not None:
                     out_file,
                     force_document=True,
                     allow_cache=False,
-                    caption="[MafiaBot]Current Approved PMs",
+                    caption="[FireBot]Current Approved PMs",
                     reply_to=event,
                 )
                 await event.delete()
