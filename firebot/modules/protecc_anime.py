@@ -11,6 +11,7 @@ from firebot.modules.sql_helper.waifu_sql import is_harem, add_grp, rm_grp, get_
 from firebot.utils import fire_on_cmd
 from . import *
 from ..utils import sudo_cmd
+from firebot import events
 
 qt = "A qt waifu appeared!"
 
