@@ -144,11 +144,11 @@ async def _(event):
 CMD_HELP.update(
     {
         "Protecc": "**protecc**\
-\n\n**Syntax : **`.pt <reply>`\
+\n\n**Syntax :** `.pt <reply>`\
 \n**Usage :** Auto protect the waifu.\
-\n\n**Syntax : **`.adwaifu `\
+\n\n**Syntax :** `.adwaifu `\
 \n**Usage :** Adds the current group to AutoWaifu Database. Need to setup WAIFU_CATCHER var with value TRUE\
-\n\n**Syntax : **`.rmwaifu`\
-\n**Usage :** Removes the group from AutoWaifu Database.\"
+\n\n**Syntax :** `.rmwaifu`\
+\n**Usage :** Removes the group from AutoWaifu Database."
     }
 )
