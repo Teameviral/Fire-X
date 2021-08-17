@@ -5,6 +5,7 @@ from telethon.tl.functions.phone import GetGroupCallRequest
 from telethon.tl.functions.phone import InviteToGroupCallRequest
 
 from firebot.utils import fire_on_cmd
+from ..utils import sudo_cmd
 
 
 async def getvc(event):
