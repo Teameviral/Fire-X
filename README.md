@@ -42,6 +42,9 @@ FROM
 <a href="https://replit.com/@chrisdroid1/Fire-X-String-Gen#main.py"><img alt="Run on Repl.it" src="https://camo.githubusercontent.com/05149b448485553c6f14f6430a45c12dcc79ed3c/68747470733a2f2f7265706c2e69742f62616467652f6769746875622f6a61727669733231303930342f4a6172766973" style="border-style: none; box-sizing: initial; max-width: 100%;" /></a></div>
 #### SAFE TO USE 😌
 
+# CONFIGS 
+```
+
 
 #important 
 API_ID [+] - YOUR API_ID 
