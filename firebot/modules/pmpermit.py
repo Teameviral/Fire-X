@@ -136,8 +136,8 @@ if PM_ON_OFF != "DISABLE":
             )
             await borg(functions.contacts.BlockRequest(event.chat_id))
 
-    @borg.on(lightning_cmd(pattern="(da|disapprove)"))
-    async def lightning_approved_pm(event):
+    @borg.on(fire_on_cmd(pattern="(da|disapprove)"))
+    async def fire_approved_pm(event):
         if event.fwd_from:
             return
         replied_user = await event.client(GetFullUserRequest(event.chat_id))
