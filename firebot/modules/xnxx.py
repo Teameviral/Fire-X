@@ -1,3 +1,4 @@
+# created by Jatin Dalal For Firebot
 """xoxbot: Avaible commands: .xnxx picx les<link>
 """
 
@@ -5,11 +6,16 @@
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
-from firebot.utils import fire_on_cmd
+from firebot import pro
+
+from ..utils import admin_cmd
 
 
-@borg.on(fire_on_cmd(pattern="xnxx?(.*)"))
+
+@borg.on(admin_cmd(pattern="xnxx?(.*)"))
 async def _(event):
+    if pro == "True":
+        return
     if event.fwd_from:
         return
     input_str = event.pattern_match.group(1)
@@ -21,7 +27,9 @@ async def _(event):
             response = conv.wait_event(
                 events.NewMessage(incoming=True, from_users=264121194)
             )
-            await event.client.send_message(chat, "💋2016 Videolar🔞{}".format(input_str))
+            await event.client.send_message(
+                chat, "💋2016 Videolar🔞{}".format(input_str)
+            )
             response = await response
         except YouBlockedUserError:
             await event.reply("```Unblock @SeXn1bot```")
@@ -32,9 +40,10 @@ async def _(event):
             await event.delete()
             await event.client.send_file(event.chat_id, response.message)
 
-
-@borg.on(fire_on_cmd(pattern="picx?(.*)"))
+@borg.on(admin_cmd(pattern="picx?(.*)"))
 async def _(event):
+    if pro == "True":
+        return
     if event.fwd_from:
         return
     input_str = event.pattern_match.group(1)
@@ -46,7 +55,9 @@ async def _(event):
             response = conv.wait_event(
                 events.NewMessage(incoming=True, from_users=264121194)
             )
-            await event.client.send_message(chat, "♨️Old photo👙{}".format(input_str))
+            await event.client.send_message(
+                chat, "♨️Old photo👙{}".format(input_str)
+            )
             response = await response
         except YouBlockedUserError:
             await event.reply("```Unblock @SeXn1bot```")
@@ -57,9 +68,10 @@ async def _(event):
             await event.delete()
             await event.client.send_file(event.chat_id, response.message)
 
-
-@borg.on(fire_on_cmd(pattern="les?(.*)"))
+@borg.on(admin_cmd(pattern="les?(.*)"))
 async def _(event):
+    if pro == "True":
+        return
     if event.fwd_from:
         return
     input_str = event.pattern_match.group(1)
