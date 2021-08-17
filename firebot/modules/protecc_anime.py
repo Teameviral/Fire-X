@@ -70,7 +70,7 @@ async def _(event):
     await hell.edit(OUTPUT_STR, parse_mode="HTML", link_preview=False)
 
 
-@bot.on(events.NewMessage(incoming=True))
+@bot.on(event.NewMessage(incoming=True))
 async def _(event):
     if not event.media:
         return
