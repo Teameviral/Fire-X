@@ -38,6 +38,7 @@ def deEmojify(inputString: str) -> str:
     return re.sub(EMOJI_PATTERN, "", inputString)
 
 
+
 # for nekobot
 async def trumptweet(text):
     r = requests.get(
