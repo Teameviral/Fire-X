@@ -130,21 +130,3 @@ async def selfdestruct(destroy):
     await smsg.delete()
     if BOTLOG:
         await destroy.client.send_message(BOTLOG_CHATID, "sd query done successfully")
-
-
-CMD_HELP.update(
-    {
-        "purge": ".purge\
-\n\n**Syntax: **`.purge`\
-\n**Usage: **Purges all messages starting from the reply.
-\n\n**Syntax: **`.purgeme` <x>\
-\n**Usage:** Deletes x amount of your latest messages.
-\n\n**Syntax:**`.del`\
-\n**Usage: **Deletes the message you replied to.
-\n\n**Syntax: **`.edit` <newmessage>\
-\n**Usage: **Replace your last message with <newmessage>.
-\n\n**Syntax: **`.sd` <x> <message>\
-\n**Usage: **Creates a message that selfdestructs in x seconds.\
-\nKeep the seconds under 100 since it puts your bot to sleep."
-    }
-)
