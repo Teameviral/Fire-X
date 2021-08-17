@@ -246,7 +246,7 @@ if Var.PRIVATE_GROUP_ID is not None:
             return
         if sender.user.verified:
             return
-        if PM_ON_OFF == "DISABLE":
+        if PM_TRUE_FALSE == "DISABLE":
             return
         if pmpermit_sql.is_approved(chat_ids):
             return
