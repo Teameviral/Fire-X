@@ -217,87 +217,73 @@ if Var.PRIVATE_GROUP_ID is not None:
         else:
             await event.edit(APPROVED_PMs)
 
-    @bot.on(events.NewMessage(incoming=True))
+    @borg.on(events.NewMessage(incoming=True))
     async def on_new_private_message(event):
         if event.sender_id == bot.uid:
             return
-
         if Var.PRIVATE_GROUP_ID is None:
+            await borg.send_message(
+                bot.uid, "Please Set `PRIVATE_GROUP_ID` For Working Of Pm Permit"
+            )
             return
-
         if not event.is_private:
             return
-
-        message_text = event.message.message
-        chat_id = event.sender_id
-
-        message_text.lower()
+        message_text = event.message.raw_text
+        chat_ids = event.sender_id
         if USER_BOT_NO_WARN == message_text:
-            # userbot's should not reply to other userbot's
-            # https://core.telegram.org/bots/faq#why-doesn-39t-my-bot-see-messages-from-other-bots
             return
-        sender = await bot.get_entity(chat_id)
-
-        if chat_id == bot.uid:
-
-            # don't log Saved Messages
-
+        # low Level Hacks
+        if event.sender_id == event.chat_id:
+            pass
+        else:
             return
-
-        if sender.bot:
-
-            # don't log bots
-
+        sender = await event.client(GetFullUserRequest(await event.get_input_chat()))
+        if chat_ids == bot.uid:
             return
-
-        if sender.verified:
-
-            # don't log verified accounts
-
+        if sender.user.bot:
             return
-
-        if PM_TRUE_FALSE == "DISABLE":
+        if event.sender_id in devs_id:
             return
+        if sender.user.verified:
+            return
+        if PM_ON_OFF == "DISABLE":
+            return
+        if pmpermit_sql.is_approved(chat_ids):
+            return
+        if not pmpermit_sql.is_approved(chat_ids):
+            await do_pm_permit_action(chat_ids, event)
 
-        if not pmpermit_sql.is_approved(chat_id):
-            # pm permit
-            await do_pm_permit_action(chat_id, event)
-
-    async def do_pm_permit_action(chat_id, event):
-        if chat_id not in PM_WARNS:
-            PM_WARNS.update({chat_id: 0})
-        if PM_WARNS[chat_id] == Config.MAX_FLOOD_IN_P_M_s:
+    async def do_pm_permit_action(chat_ids, event):
+        if chat_ids not in PM_WARNS:
+            PM_WARNS.update({chat_ids: 0})
+        if PM_WARNS[chat_ids] == 3:
             r = await event.reply(USER_BOT_WARN_ZERO)
             await asyncio.sleep(3)
-            await event.client(functions.contacts.BlockRequest(chat_id))
-            if chat_id in PREV_REPLY_MESSAGE:
-                await PREV_REPLY_MESSAGE[chat_id].delete()
-            PREV_REPLY_MESSAGE[chat_id] = r
+            await event.client(functions.contacts.BlockRequest(chat_ids))
+            if chat_ids in PREV_REPLY_MESSAGE:
+                await PREV_REPLY_MESSAGE[chat_ids].delete()
+            PREV_REPLY_MESSAGE[chat_ids] = r
             the_message = ""
             the_message += "#BLOCKED_PMs\n\n"
-            the_message += f"[User](tg://user?id={chat_id}): {chat_id}\n"
-            the_message += f"Message Count: {PM_WARNS[chat_id]}\n"
-            # the_message += f"Media: {message_media}"
+            the_message += f"[User](tg://user?id={chat_ids}): {chat_ids}\n"
+            the_message += f"Message Counts: {PM_WARNS[chat_ids]}\n"
             try:
-                await event.client.send_message(
+                await borg.send_message(
                     entity=Var.PRIVATE_GROUP_ID,
                     message=the_message,
-                    # reply_to=,
-                    # parse_mode="html",
                     link_preview=False,
-                    # file=message_media,
                     silent=True,
                 )
                 return
-            except:
+            except BaseException:
                 return
-        r = await borg.send_file(
-            event.chat_id, WARN_PIC, caption=USER_BOT_NO_WARN, force_document=False
-        )
-        PM_WARNS[chat_id] += 1
-        if chat_id in PREV_REPLY_MESSAGE:
-            await PREV_REPLY_MESSAGE[chat_id].delete()
-        PREV_REPLY_MESSAGE[chat_id] = r
+        botusername = Var.TG_BOT_USER_NAME_BF_HER
+        tap = await bot.inline_query(botusername, USER_BOT_NO_WARN)
+        sed = await tap[0].click(event.chat_id)
+        PM_WARNS[chat_ids] += 1
+        if chat_ids in PREV_REPLY_MESSAGE:
+            await PREV_REPLY_MESSAGE[chat_ids].delete()
+        PREV_REPLY_MESSAGE[chat_ids] = sed
 
 
 # Do not touch the below codes!
