@@ -14,7 +14,7 @@ from telethon.tl.types import (
 )
 
 from firebot import CMD_HELP
-from firebot.Config import Config
+from firebot.Configs import Config
 from firebot.utils import *
 
 
