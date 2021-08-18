@@ -46,7 +46,7 @@ USER_BOT_NO_WARN = (
 )
 if Var.PRIVATE_GROUP_ID is not None:
 
-    @borg.on(fire_on_cmd(pattern="(a|approve)$"))
+    @borg.on(admin_cmd(pattern="(a|approve)$"))
     async def approve(event):
         if event.fwd_from:
             return
