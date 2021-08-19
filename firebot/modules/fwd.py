@@ -1,36 +1,90 @@
-"""Enable Seen Counter in any message,Credits To Xtra-Tg Owner 
-to know how many users have seen your message
-Syntax: .fwd as reply to any message"""
+import string
+
+from telethon.tl.types import Channel
+
+from firebot.utils import admin_cmd, edit_or_reply, sudo_cmd
 from firebot import CMD_HELP
-from firebot.utils import fire_on_cmd
+from firebot.Configs import Config
+
+global msg_cache
+msg_cache = {}
 
 
-@fire.on(fire_on_cmd(pattern="frwd"))
+global groupsid
+groupsid = []
+
+
+async def all_groups_id(mafia):
+    mafiagroups = []
+    async for dialog in mafia.client.iter_dialogs():
+        entity = dialog.entity
+        if isinstance(entity, Channel) and entity.megagroup:
+            mafiagroups.append(entity.id)
+    return mafiagroups
+
+
+@bot.on(admin_cmd(pattern="frwd$"))
+@bot.on(sudo_cmd(pattern="frwd$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
-    if Config.PRIVATE_GROUP_ID is None:
-        await event.edit(
-            "Please set the required environment variable `PRIVATE_GROUP_ID` for this plugin to work"
+    if Config.PRIVATE_GROUP_BOT_API_ID is None:
+        await edit_or_reply(
+            event,
+            "Please set the required environment variable `PRIVATE_GROUP_BOT_API_ID` for this plugin to work",
         )
         return
     try:
-        e = await borg.get_entity(Config.PRIVATE_GROUP_ID)
+        e = await event.client.get_entity(Config.PRIVATE_GROUP_BOT_API_ID)
     except Exception as e:
-        await event.edit(str(e))
+        await edit_or_reply(event, str(e))
     else:
         re_message = await event.get_reply_message()
         # https://t.me/telethonofftopic/78166
-        fwd_message = await borg.forward_messages(e, re_message, silent=True)
-        await borg.forward_messages(event.chat_id, fwd_message)
-        await fwd_message.delete()
+        fwd_message = await event.client.forward_messages(e, re_message, silent=True)
+        await event.client.forward_messages(event.chat_id, fwd_message)
         await event.delete()
 
 
-CMD_HELP.update(
-    {
-        "fwd": "**Fwd**\
-\n\n**Syntax : **`.frwd <reply to a message>`\
-\n**Usage :** Enable Seen Counter in any message."
-    }
-)
+@bot.on(admin_cmd(pattern="resend$"))
+@bot.on(sudo_cmd(pattern="resend$", allow_sudo=True))
+async def _(event):
+    if event.fwd_from:
+        return
+    try:
+        await event.delete()
+    except:
+        pass
+    m = await event.get_reply_message()
+    if not m:
+        return
+    await event.respond(m)
+
+
+@bot.on(admin_cmd(pattern=r"fpost (.*)"))
+@bot.on(sudo_cmd(pattern=r"fpost (.*)", allow_sudo=True))
+async def _(event):
+    if event.fwd_from:
+        return
+    global groupsid
+    global msg_cache
+    await event.delete()
+    text = event.pattern_match.group(1)
+    destination = await event.get_input_chat()
+    if len(groupsid) == 0:
+        groupsid = await all_groups_id(event)
+    for c in text.lower():
+        if c not in string.ascii_lowercase:
+            continue
+        if c not in msg_cache:
+            async for msg in event.client.iter_messages(event.chat_id, search=c):
+                if msg.raw_text.lower() == c and msg.media is None:
+                    msg_cache[c] = msg
+                    break
+        if c not in msg_cache:
+            for i in groupsid:
+                async for msg in event.client.iter_messages(event.chat_id, search=c):
+                    if msg.raw_text.lower() == c and msg.media is None:
+                        msg_cache[c] = msg
+                        break
+        await event.client.forward_messages(destination, msg_cache[c])
