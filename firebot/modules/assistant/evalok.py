@@ -13,7 +13,7 @@ async def _(event):
     pro = await bot.get_me()
     boy = pro.id
     if not event.sender_id == boy or not event.sender_id == id:
-          return await event.reply("sir Deploy your own **ULTRA X** \nsee @UltraXoT")
+          return await event.reply("Deploy your own Fire-X")
     if event.fwd_from:
         return
     cmd = event.text.split(" ", maxsplit=1)[1]
