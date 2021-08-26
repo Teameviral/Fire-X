@@ -3,7 +3,7 @@ import io
 import os
 import sys
 import traceback
-from .. import id
+from telethon.utils import pack_bot_file_id
 from telethon import events
 from firebot import bot
 
