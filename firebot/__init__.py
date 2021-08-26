@@ -20,6 +20,10 @@ from telethon.sessions import StringSession
 
 from var import Var
 
+def set(self, **x):
+  if x.get("id"):
+      self.id = x["id"]
+
 if Var.STRING_SESSION:
     session_name = str(Var.STRING_SESSION)
     bot = TelegramClient(StringSession(session_name), Var.APP_ID, Var.API_HASH)
