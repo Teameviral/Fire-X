@@ -585,6 +585,23 @@ def god_only():
 
     return decorator
 
+def master_only():
+    def decorator(func):
+        @functools.wraps(func)
+        async def wrapper(event):
+            moms = bot.uid
+            if event.sender_id == moms:
+                await func(event)
+            else:
+                if event.sender.id in Config.SUDO_USERS:
+                 return await event.reply("`Oops it seems you are not worthy to use it...`")
+                else:
+                 pass
+
+        return wrapper
+
+    return decorator
+
 
 def only_groups():
     def decorator(func):
