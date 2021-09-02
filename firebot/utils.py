@@ -693,6 +693,7 @@ def start_assistant(shortname):
         mod.only_pro = only_pro()
         mod.pro_only = only_pro()
         mod.only_group = only_group()
+        mod.master_only = master_only()
         mod.is_bot_admin = is_bot_admin()
         mod.is_admin = is_admin()
         mod.peru_only = peru_only()
