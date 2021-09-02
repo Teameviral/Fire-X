@@ -14,10 +14,11 @@ from firebot import CMD_HELP
 
 
 @fire.on(fire_on_cmd("eval"))
-@fire.on(sudo_cmd("eval", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
+    if event.sender.id in Config.SUDO_USERS:
+        return await event.reply("`Sorry kid but you are not worthy to use this command...`")
     await edit_or_reply(event, "Processing ...")
     cmd = event.text.split(" ", maxsplit=1)[1]
     reply_to_id = event.message.id
@@ -50,7 +51,7 @@ async def _(event):
     else:
         evaluation = "Success"
 
-    final_output = "**EVAL**: `{}` \n\n **OUTPUT**: \n`{}` \n".format(cmd, evaluation)
+    final_output = "**Eval**: `{}` \n\n **Output**: \n`{}` \n".format(cmd, evaluation)
 
     if len(final_output) > Config.MAX_MESSAGE_SIZE_LIMIT:
         with io.BytesIO(str.encode(final_output)) as out_file:
