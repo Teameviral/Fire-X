@@ -15,7 +15,7 @@ from telethon.errors import *
 from firebot.Configs import Config
 from firebot import bot
 
-bot = chatbot
+bot = tgbot
 p= print
 
 
