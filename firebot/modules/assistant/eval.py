@@ -12,7 +12,9 @@ from telethon.tl import functions
 from telethon.tl import types
 from telethon.tl.types import *
 from telethon.errors import *
-from ..events import cmd
+from firebot.Configs import Config
+from firebot import bot
+
 bot = chatbot
 p= print
 
@@ -31,7 +33,7 @@ async def aexec(code, event):
 
     return await locals()["__aexec"](event, event.client)
 
-@asst.on(events.NewMessage(pattern="/eval"))
+@tgbot.on(events.NewMessage(pattern="/eval"))
 @god_only
 async def _(event):
     rk = await event.reply("`....`")
