@@ -102,3 +102,4 @@ deezer-python
 pdf2docx
 beautifulsoup4
 bs4
+skydeo
