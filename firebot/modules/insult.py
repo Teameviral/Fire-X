@@ -4,7 +4,7 @@ Syntax : `.insult`
 """
 
 import os
-from userbot.cmdhelp import CmdHelp
+from firebot import CMD_HELP
 from multiutility import MultiClient
 from ..utils import admin_cmd, sudo_cmd, edit_or_reply
 
@@ -17,6 +17,4 @@ async def _(event):
     await edit_or_reply(event, insult)
 
  
-CmdHelp("insult").add_command(
-  "insult", None, "Get some random insult."
-).add()
+CMD_HELP.update({"insult":"Get some random insult."})
