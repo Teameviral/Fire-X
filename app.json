@@ -107,11 +107,11 @@
       "required": false
     },
      "ALIVE_IMAGE": {
-      "description": "Enter Image URL for bot pic ",
+      "description": "https://telegra.ph/file/1cc1bb6b42f5f1800bcc8.jpg",
       "value": ""
     },
      "PMPERMIT_PIC": {
-      "description": "Enter Image URL for bot's pmsecurity pic ",
+      "description": "https://telegra.ph/file/1cc1bb6b42f5f1800bcc8.jpg",
       "value": ""
     },    
     "TZ": {
