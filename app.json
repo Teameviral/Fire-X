@@ -107,12 +107,12 @@
       "required": false
     },
      "ALIVE_IMAGE": {
-      "description": "https://telegra.ph/file/1cc1bb6b42f5f1800bcc8.jpg",
-      "value": ""
+      "description": "Use Telegraph.ph image link for your alive image. set as default if you don't wanna change.",
+      "value": "https://telegra.ph/file/1cc1bb6b42f5f1800bcc8.jpg"
     },
      "PMPERMIT_PIC": {
-      "description": "https://telegra.ph/file/1cc1bb6b42f5f1800bcc8.jpg",
-      "value": ""
+      "description": "Use Telegraph.ph image link for your alive image. set as default if you don't wanna change.",
+      "value": "https://telegra.ph/file/1cc1bb6b42f5f1800bcc8.jpg"
     },    
     "TZ": {
       "description": "Required for Correct Time on autopic",
