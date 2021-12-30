@@ -1,4 +1,4 @@
 echo """
     FIREBOT
 """
-python3 -m firebotmain.py
+python3 -m firebot
