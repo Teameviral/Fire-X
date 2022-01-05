@@ -7,16 +7,13 @@ Syntax: .eval PythonCode"""
 import io
 import sys
 import traceback
-import time
-import asyncio
 
 from uniborg.util import edit_or_reply, fire_on_cmd, sudo_cmd
 
 from firebot import CMD_HELP
 
 
-
-@fire.on(fire_on_cmd("eval")
+@fire.on(fire_on_cmd("eval"))
 async def _(event):
     if event.fwd_from:
         return
