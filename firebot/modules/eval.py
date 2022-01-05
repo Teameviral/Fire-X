@@ -14,7 +14,7 @@ from uniborg.util import edit_or_reply, fire_on_cmd, sudo_cmd
 
 from firebot import CMD_HELP
 
-EVAL = os.environ.get("EVAL", None)
+EVAL == os.environ.get("EVAL", None)
 from . import *
 
 @fire.on(fire_on_cmd("eval"))
