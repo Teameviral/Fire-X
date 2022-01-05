@@ -16,8 +16,7 @@ from firebot import CMD_HELP
 
 
 
-@fire.on(fire_on_cmd("eval"))
-async def _(event):
+@fire.on(fire_on_cmd("eval")
 async def _(event):
     if event.fwd_from:
         return
