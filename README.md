@@ -8,6 +8,7 @@
    <i>The Awaited Bot</i>
 </p>
  
+## New Updated Repo is [Here](https://github.com/Teameviral/FIREXUSERBOT).
    
 # [Fire-X](https://t.me/FireXUserBot) userbot
 
@@ -21,10 +22,16 @@ It is not like the other bots which are being Suspended by Heroku. Hence, it can
 <p align="left"><a href="https://github.com/TeamEviral/Fire-X/network/members"><img src="https://img.shields.io/github/forks/TeamEviral/Fire-X?label=Forks&logoColor=purple&style=social"></a><p align="left"><a href="https://github.com/TeamEviral/Fire-X/stargazers"><img src="https://img.shields.io/github/stars/TeamEviral/Fire-X?logoColor=red&style=social"></a><p align="left"><a href="https://github.com/TeamEviral/Fire-X"><img src="https://img.shields.io/github/last-commit/TeamEviral/Fire-X?logoColor=brown&style=plastic"></a>
 
 # How to Deploy Fire-X Userbot?
-Tutorial Coming soon
    
 ##### Deploy
 <a href="https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2Fmaihindu%2FfireX-&amp;template=https%3A%2F%2Fgithub.com%2Fmaihindu%2Ffirex-" rel="nofollow" style="background-color: initial; box-sizing: border-box; color: #0366d6; text-decoration-line: none;"><img alt="Deploy To Heroku" src="https://camo.githubusercontent.com/83b0e95b38892b49184e07ad572c94c8038323fb/68747470733a2f2f7777772e6865726f6b7563646e2e636f6d2f6465706c6f792f627574746f6e2e737667" style="border-style: none; box-sizing: initial; max-width: 100%;" /></a></div>
+
+## Heroku salesforce error solution.
+   - Create a github account first.
+   - Fork this repo above by turning on desktop sites.
+   - then follow template method given below.
+   - Your Forked Url is looking Like: `https://github.com/YourGitName/Fire-X` ; YourGitName = Your Github Username.
+   - Now use this url to deploy: `Heroku.com/deploy?template=your forked url here` e.g.  `heroku.com/deploy?template=https://github.com/maihindu/Fire-X`; Here we put YourGitName = maihindu.   
 
 
 ### API ID AND API HASH 
