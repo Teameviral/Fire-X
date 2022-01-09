@@ -63,7 +63,7 @@ STRING_SESSION [+] - STRING SESSION
 
 <a href="https://telegram.me/FIRE_X_CHANNEL" target="_blank"><img src="https://img.shields.io/badge/Join-Channel-yellow.svg?style=for-the-badge&logo=Telegram"></a>
 
-<a href="https://telegram.me/FIREXuserbot" target="_blank"><img src="https://img.shields.io/badge/Join-Support%20Group-red.svg?style=for-the-badge&logo=Telegram"></a>
+<a href="https://telegram.me/FIREXSUPPORT" target="_blank"><img src="https://img.shields.io/badge/Join-Support%20Group-red.svg?style=for-the-badge&logo=Telegram"></a>
 
 
 #####  Credits 🌹
