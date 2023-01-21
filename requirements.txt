@@ -40,9 +40,11 @@ heroku3
 httplib2
 humanize
 lxml
+multiutility
 patool
 lyricsgenius
 oauth2client
+pampyio
 psycopg2-binary==2.8.6
 PyLyrics
 pySmartDL
